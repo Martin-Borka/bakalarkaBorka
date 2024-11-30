@@ -56,10 +56,48 @@ double MONITOR_OUT_objects[4][4];
 double MONITOR_TEMPERATURE_object[6];
 double MONITOR_FREQ_objects[3];
 
-srand(time(NULL));
+int onehundredfourioa[16][2] = {
+        {4000, 0},
+        {4001, 2},
+        {4002, 2},
+        {4003, 0},
+        {5000, 0},
+        {5001, 0},
+        {5002, 0},
+        {5003, 0},
+        {5004, 0},
+        {5006, 0},
+        {5007, 0},
+        {5011, 0},
+        {5012, 0},
+        {5014, 0},
+        {5017, 0},
+        {5018, 0}
+    };
+/*
+4000
+4001
+4002
+4003
+5000
+5001
+5002
+5003
+5004
+5006
+5011
+5012
+5014
+5017
+5018
+*/
 
-void LogSTART()
-{
+//srand(time(NULL));
+
+
+
+void onehundredfour(){
+    onehundredfourioa[15][1];
 }
 
 void nacteni()
@@ -69,7 +107,7 @@ void nacteni()
     if (fp == NULL)
     {
         printf("Chyba při otevírání souboru.\n");
-        return 1;
+        return ;
     }
 
     //
@@ -438,6 +476,14 @@ void zapisDoSouboru(const char *text)
     fclose(soubor);
 }
 
+void printonehundredfour(){
+    printf("104 ioa:\n");
+    for (int i = 0; i < 15; i++) {
+        printf("%d -> %d\n", onehundredfourioa[i][0], onehundredfourioa[i][1]);
+    }
+
+}
+
 // Log
 // event logs
 void LogSTART()
@@ -468,53 +514,6 @@ void LogSETUP_F()
     fclose(fp);
 }
 
-void LogCONREQ(const char *ipAddress)
-{
-    time_t t = time(NULL);
-    struct tm tm = *localtime(&t);
-    FILE *fp;
-    fp = fopen("EventLog.txt", "a");
-    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d New connection request from %s \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec, ipAddress);
-    fclose(fp);
-}
-
-void LogCONOPEN()
-{
-    time_t t = time(NULL);
-    struct tm tm = *localtime(&t);
-    FILE *fp;
-    fp = fopen("EventLog.txt", "a");
-    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d Connection opened \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-    fclose(fp);
-}
-
-void LogCONCLOSED()
-{
-    time_t t = time(NULL);
-    struct tm tm = *localtime(&t);
-    FILE *fp;
-    fp = fopen("EventLog.txt", "a");
-    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d Connection closed \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-    fclose(fp);
-}
-void LogCONACT()
-{
-    time_t t = time(NULL);
-    struct tm tm = *localtime(&t);
-    FILE *fp;
-    fp = fopen("EventLog.txt", "a");
-    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d Connection activated \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-    fclose(fp);
-}
-void LogCONDEACT()
-{
-    time_t t = time(NULL);
-    struct tm tm = *localtime(&t);
-    FILE *fp;
-    fp = fopen("EventLog.txt", "a");
-    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d Connection deactivated \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-    fclose(fp);
-}
 // data logs
 
 // undervoltage overvoltage
@@ -558,6 +557,16 @@ void LogOver01()
 }
 // zkrat
 
+void LogOver01()
+{
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE *fp;
+    fp = fopen("EventLog.txt", "a");
+    fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d LD0.VMMXU1.HiAlm.stVal \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+    fclose(fp);
+}
+
 // start
 int main()
 {
@@ -568,12 +577,14 @@ int main()
     double underovervoltageValue = 0, underovervoltageValuePlus = 1;
     int underovervoltagecounter;
     int underovervoltageValueFlag;
+    bool sendRecovery;
 
     srand(time(NULL)); // generovani
     char text[MAX_LENGTH];
     running = true;
 
     // log
+    onehundredfour();
     LogSTART();
     nacteni();
     LogSETUP_G();
@@ -587,7 +598,7 @@ int main()
         // při změně času
         if (time_now != time_tmp)
         {
-            // time_monitorTimer+=1;
+            time_monitorTimer+=1;
             time_tmp = time_now;
 
             time_t t = time(NULL);
@@ -619,7 +630,10 @@ int main()
                 alarm = 0;
                 probihaiciscenar = false;
                 prestart = false;
+                sendRecovery=true;
             }
+
+            
 
             // podpětí
             else if (scenar == 0 && (underovervoltagecounter < BREAKER_DELAY))
@@ -644,7 +658,7 @@ int main()
             if (scenar == 2 && (underovervoltagecounter < BREAKER_DELAY))
             {
 
-                if (undervoltage == false)
+                if (overvoltage == false)
                 {
                     underovervoltageValue = variables[0][0];
                 }
@@ -676,19 +690,17 @@ int main()
                 }
 
                 variables[0][0] = underovervoltageValue * underovervoltageValuePlus;
-                /*
-                U>420kV	LD0.VMMXU1.HiWrn.stVal
-                U>440kV	LD0.VMMXU1.HiAlm.stVal
-                U<380kV	LD0.VMMXU1.LoWrn.stVal
-                U<360kV	LD0.VMMXU1.LoAlm.stVal
-                */
+            
 
                 if (variables[0][0] < (((variables[0][1] + variables[0][2]) / 2) * 0.9))
                 {
                     if (underovervoltageValueFlag==0)
                     {
                         LogUnder01();
-                        ////5004 = 0;5007 = 0;
+                        onehundredfourioa[8][1]= 1;//5004 = 1
+                        onehundredfourioa[11][1]= 1;//5011 = 1;
+
+                        
                         printf("%f > %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                         underovervoltageValueFlag+=1;
                     }
@@ -698,7 +710,7 @@ int main()
                     if (underovervoltageValueFlag==1)
                     {
                     LogUnder005();
-                    //5011 = ;
+                    onehundredfourioa[14][1]= 1;//5017 = 1;
                     printf("%f > %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                     underovervoltageValueFlag+=1;
                     }
@@ -708,7 +720,9 @@ int main()
                     if (underovervoltageValueFlag==2)
                     {
                     LogOver01();
-                    //zapsani 5004 = 0; 5008=0;
+                    onehundredfourioa[8][1]= 1;
+                    onehundredfourioa[12][1]= 1;
+                    //zapsani 5004 = 0; 50012=0;
                     printf("%f < %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                     underovervoltageValueFlag+=1;
                     }
@@ -718,7 +732,8 @@ int main()
                     if (underovervoltageValueFlag==3)
                     {
                     LogOver005();
-                    //5012 = 0;
+                    onehundredfourioa[15][1]= 1;
+                    //5018 = 0;
                     printf("%f < %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                     underovervoltageValueFlag+=1;
                     }
@@ -726,30 +741,40 @@ int main()
 
                 alarm += 1;
             }
-
+/*
+        {4000, 0}, 0
+        {4001, 0},1
+        {4002, 0},2
+        {4003, 0},3
+        {5000, 0},4
+        {5001, 0},5
+        {5002, 0},6
+        {5003, 0},7
+        {5004, 0},8
+        {5006, 0},9
+        {5007, 0},10
+        {5011, 0},11
+        {5012, 0},12
+        {5014, 0},13
+        {5017, 0},14
+        {5018, 0}  15*/
             /*
-            t=0, I>4xIn	LD0.PHIPTOC1.Str.general	ACD	BOOLEAN	0->1	aktivace zkratové ochrany	posílá se také jako GOOSE do další rozvodny
-        t+100ms	LD0.PHIPTOC1.Op.general	ACT	BOOLEAN	0->1	    působení zkratové ochrany
-        t+100ms	LD0.TRPPTRC1.Op.general	ACT	BOOLEAN	0->1	    aktivace master tripu - povel k vypnutí vypínače	Pokud je MU a ochrana zvlášť, toto se posílá jako GOOSE k vypnutí vypínače
-        t+100ms	LD0.DARREC1.OpOpn.general	ACT	BOOLEAN	0->1	povel k vypnutí vypínače od bloku, který řídí opětovné zapínání	Pokud je MU a ochrana zvlášť, toto se posílá jako GOOSE k vypnutí vypínače (taky)
-        t+100ms	LD0.DARREC1.WtMstr.stVal	SPS	BOOLEAN	0->1	Povel k blokování opětovného zapnutí ochraně na druhém konci vedení	posílá se POUZE jako GOOSE do další rozvodny
-        t+110ms	CTRL.CBCSWI1.PosCls.stVal	SPS	BOOLEAN	1->0	vypínač není sepnut (ale ještě není ani rozepnut)	posílá se také jako GOOSE ostatním IED
-        t+170ms	CTRL.CBCSWI1.PosOpn.stVal	SPS	BOOLEAN	0->1	vypínač je rozepnut (nyní je měřený proud 0 A)	posílá se také jako GOOSE ostatním IED
-        t+170ms	LD0.PHIPTOC1.Str.general	ACD	BOOLEAN	1->0	odpadnutí oc i tripu po rozepnutí vypínače
-        t+170ms	LD0.PHIPTOC1.Op.general	ACT	BOOLEAN	1->0
-        t+170ms	LD0.TRPPTRC1.Op.general	ACT	BOOLEAN	1->0
-        t+170ms	LD0.DARREC1.OpOpn.general	ACT	BOOLEAN	1->0
-        t+670ms	LD0.DARREC1.OpCls.general	ACT	BOOLEAN	0->1	pous o opětovné zapnutí (pulz 150ms)
-        t+820ms	LD0.DARREC1.OpCls.general	ACT	BOOLEAN	1->0
-        t+680ms	CTRL.CBCSWI1.PosOpn.stVal	SPS	BOOLEAN	1->0	vypínač není rozepnut (ale ještě není sepnut)	posílá se také jako GOOSE ostatním IED
-        t+740ms	CTRL.CBCSWI1.PosCls.stVal	SPS	BOOLEAN	0->1	vypínač je sepnut	posílá se také jako GOOSE ostatním IED
-        t+740ms	LD0.DARREC1.WtMstr.stVal	SPS	BOOLEAN	1->0	Pouze pokud je pokus o opětovné zapnutí úspěšný. Jinak následuje finální vypnutí	posílá se POUZE jako GOOSE do další rozvodny
-        t+740ms	LD0.PHIPTOC1.Str.general	ACD	BOOLEAN	0->1	Pokud pokus o opětovné zapnutí není úspěšný, opět se aktivuje ochrana, trip, vypne se vypínač
-        t+840ms	LD0.PHIPTOC1.Op.general	ACT	BOOLEAN	0->1
-        t+840ms	LD0.TRPPTRC1.Op.general	ACT	BOOLEAN	0->1
-        t+840ms	LD0.DARREC1.OpOpn.general	ACT	BOOLEAN	0->1
-        t+850ms	CTRL.CBCSWI1.PosCls.stVal	SPS	BOOLEAN	1->0		posílá se také jako GOOSE ostatním IED
-        r+910ms	CTRL.CBCSWI1.PosOpn.stVal	SPS	BOOLEAN	0->1		posílá se také jako GOOSE ostatním IED
+             5001, 5004, 5006=0->1	aktivace zkratové ochrany
+            4001=2->1	působení zkratové ochrany
+            ??? - jde do scady	aktivace master tripu - povel k vypnutí vypínače
+            5002=0->1	povel k vypnutí vypínače od bloku, který řídí opětovné zapínání
+            -	Povel k blokování opětovného zapnutí ochraně na druhém konci vedení
+            4002=2->0/3	vypínač není sepnut (ale ještě není ani rozepnut)
+            4002=0/3->1	vypínač je rozepnut (nyní je měřený proud 0 A)
+            -	odpadnutí oc i tripu po rozepnutí vypínače
+            5001=1->0	
+            5002=1->0	
+            5004, 5006=1->0	
+            5001=0->1	pous o opětovné zapnutí (pulz 150ms)
+            5002=0->1	
+            4002=1->0/3	vypínač není rozepnut (ale ještě není sepnut)
+            4002=0/3->2	vypínač je sepnut
+            5001,5002=1->0	Pouze pokud je pokus o opětovné zapnutí úspěšný. Jinak následuje finální vypnutí
 
 
             */
@@ -771,6 +796,11 @@ int main()
                     {
                     case 0:
                         printf("Short Circuit");
+                        onehundredfourioa[5][1]= 1;
+                        onehundredfourioa[8][1]= 1;
+                        onehundredfourioa[9][1]= 1;
+                        onehundredfourioa[1][1]= 1;//4001
+                        onehundredfourioa[6][1]= 1;
                         waitshortCircuit += 1;
                         shortCircuitphase = 1;
                         break;
@@ -781,31 +811,48 @@ int main()
                         holderI = variables[1][0];
                         variables[1][0] *= 4;
                         shortCircuitphase += 1;
+                        onehundredfourioa[2][1]= 0;//4002
                         break;
 
                     case 2:
                         variables[1][0] = 0;
                         shortCircuitphase += 1;
+                        onehundredfourioa[2][1]= 1;//4002
+                        printf("Short Circuit: I=0");
+
+                        onehundredfourioa[5][1]= 0;
+                        onehundredfourioa[6][1]= 0;
+                        onehundredfourioa[8][1]= 0;
+                        onehundredfourioa[9][1]= 0;
                         break;
 
                     case 3:
+                        onehundredfourioa[5][1]= 1;
+                        onehundredfourioa[6][1]= 1;
+                        onehundredfourioa[2][1]= 0;
+                        onehundredfourioa[2][1]= 2;
                         if (scenar == 3)
                         {
                             variables[1][0] = holderI;
                             probihaiciscenarI = false;
+                            onehundredfourioa[5][1]= 0;
+                            onehundredfourioa[6][1]= 0;
+                            printf("short circuit recovery ");
                         }
                         else if (scenar == 4)
                         {
                             variables[1][0] = 0;
+                            printf("Short Circuit: I=0");
                         }
                         shortCircuitphase += 1;
                         break;
 
-                    default:
-                        // Pokud by shortCircuitphase nabýval neočekávané hodnoty.
+                        default:
                         break;
                     }
+                    printonehundredfour();
                     printf("Short Circuit I=%f", variables[1][0]);
+
                     if (scenar == 4 && shortCircuitphase > 3)
                     {
 
@@ -859,25 +906,32 @@ int main()
             monitorOUT[3] = monitorOUT[0] * monitorOUT[1] * (float)sin(TRANSFORMER_POWER_FACTOR * M_PI / 180); // Q=U*I*sin(alfa)
             printf("%f-%f-%f-%f\n", monitorOUT[0], monitorOUT[1], monitorOUT[2], monitorOUT[3]);
 
-            /*
-            sharedMatrixPER[matrixRow][0]=36;
-            sharedMatrixPER[matrixRow][1]=monitor_out[j][0];
-            sharedMatrixPER[matrixRow][2]=monitor_out_actual[j][0];
-            matrixRow+=1;
-            */
-
-            /*
-            printf("%f-%f-%f-%f\n", monitor_in_actual[j][0], monitor_in_actual[j][1], monitor_in_actual[j][2], monitor_in_actual[j][3]);
-            */
+            
         }
 
         // změna dat, UIQ
+         
+        //in response time
+        if(time_monitorTimer>=PER_RESPONSE_time || alarm>=ALARM_PERIOD_time || sendRecovery==true){
+
+            if (alarm>=ALARM_PERIOD_time || sendRecovery==true){
+                alarm=0;
+                sendRecovery=false;
+                printf("Alarm\n");
+            }
+            //single values
+            
+            time_monitorTimer=0;
 
         if (scenar == 6)
         {
             running = false;
         }
+        }
     }
+
+
+
     Thread_sleep(1000);
     return 0;
 }
