@@ -4,11 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <windows.h>
 #include <stdio.h>
 #include <signal.h>
-#include "cs104_slave.h"
+/*#include "cs104_slave.h"
 #include "hal_thread.h"
-#include "hal_time.h"
+#include "hal_time.h"*/
 
 #define MAX_LENGTH 256
 
@@ -100,24 +101,18 @@ void onehundredfour(){
     onehundredfourioa[15][1];
 }
 
-void nacteni()
-{
+void nacteni() {
     FILE *fp;
     fp = fopen("MainConfig_server2404.txt", "r");
-    if (fp == NULL)
-    {
+    if (fp == NULL) {
         printf("Chyba při otevírání souboru.\n");
-        return ;
+        return;
     }
 
-    //
-    while (getline(&line, &len, fp) != -1)
-    {
-        char *pch;
-        pch = strtok(line, "=, ;-");
-        while (pch != NULL)
-        {
-
+    char line[1024]; // Pevný buffer pro čtení řádků
+    while (fgets(line, sizeof(line), fp) != NULL) {
+        char* pch = strtok(line, "=, ;-");
+        while (pch != NULL) {
             char ip_address[16];
 
             if (!(strcmp(pch, "IPADDRESS")))
@@ -186,65 +181,46 @@ void nacteni()
             if (!(strcmp(pch, "INPUT_POWER_FACTOR")))
             {
                 pch = strtok(NULL, "=, ;-");
-                INPUT_POWER_FACTOR = atoi(pch);
+                INPUT_POWER_FACTOR = atof(pch);
             }
 
             if (!(strcmp(pch, "TRANSFORMER_POWER_FACTOR")))
             {
                 pch = strtok(NULL, "=, ;-");
-                TRANSFORMER_POWER_FACTOR = atoi(pch);
+                TRANSFORMER_POWER_FACTOR = atof(pch);
             }
 
             // monitor   VOLTAGE = 220.0; 218-228; 0.01
             //            CURRENT = 0.5; 96-100; 0.01
             //           FREQUENCY = 50.0; 45-55; 0.03
 
-            if (!(strcmp(pch, "VOLTAGE")))
-            {
-                pch = strtok(NULL, "=, ;-");
-                variables[0][0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[0][1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[0][2] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[0][3] = atoi(pch);
+            if (!(strcmp(pch, "VOLTAGE"))) {
+                for (int j = 0; j < 4; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    variables[0][j] = atof(pch);
+                }
             }
 
-            if (!(strcmp(pch, "CURRENT")))
-            {
-                pch = strtok(NULL, "=, ;-");
-                variables[1][0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[1][1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[1][2] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[1][3] = atoi(pch);
+            if (!(strcmp(pch, "CURRENT"))) {
+                for (int j = 0; j < 4; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    variables[1][j] = atof(pch);
+                }
             }
 
-            if (!(strcmp(pch, "FREQUENCY")))
-            {
-                pch = strtok(NULL, "=, ;-");
-                variables[2][0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[2][1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[2][2] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                variables[2][3] = atoi(pch);
+            if (!(strcmp(pch, "FREQUENCY"))) {
+                for (int j = 0; j < 4; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    variables[2][j] = atof(pch);
+                }
             }
 
             if (!(strcmp(pch, "MONITOR_OUT_objects")))
             { // U
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_OUT_objects[0][0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_OUT_objects[0][1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_OUT_objects[0][2] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_OUT_objects[0][3] = atoi(pch);
+                for (int j = 0; j < 4; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    MONITOR_OUT_objects[0][j] = atof(pch);
+                }
             }
 
             if (!(strcmp(pch, "MONITOR_TEMP_FREQ")))
@@ -252,9 +228,7 @@ void nacteni()
                 pch = strtok(NULL, "=, ;-");
                 MONITOR_TEMP_FREQ = atoi(pch);
             }
-            /*-
-                        MONITOR_OUT_objects = 220.0; 218-222; 0.01
-
+            /*-MONITOR_OUT_objects = 220.0; 218-222; 0.01
             MONITOR_TEMP_FREQ = 1
             MONITOR_TEMPERATURE_object = 102;60-120;29-31
             MONITOR_FREQ_objects = 49.75-50.25
@@ -262,31 +236,21 @@ void nacteni()
 
             if (!(strcmp(pch, "MONITOR_TEMPERATURE_object")))
             { // teplota
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[2] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[3] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[4] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[5] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_TEMPERATURE_object[6] = atoi(pch);
+                for (int j = 0; j < 7; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    MONITOR_TEMPERATURE_object[j] = atof(pch);
+                }
+
             }
 
             if (!(strcmp(pch, "MONITOR_FREQ_objects")))
             { // frekvence
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_FREQ_objects[0] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_FREQ_objects[1] = atoi(pch);
-                pch = strtok(NULL, "=, ;-");
-                MONITOR_FREQ_objects[2] = atoi(pch);
+                for (int j = 0; j < 3; j++) {
+                    pch = strtok(NULL, "=, ;-");
+                    MONITOR_FREQ_objects[j] = atof(pch);
+                }
             }
+            pch = strtok(NULL, "=, ;-");
         }
     }
     fclose(fp);
@@ -338,7 +302,7 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
     randomNumber = rand() % 3;
 
     int n = (int)((max - min) / step) + 1;
-    int *size = n;
+    int size = n;
 
     // Alokace paměti pro pole
     double *array = (double *)malloc(n * sizeof(double));
@@ -406,56 +370,45 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
 }
 //------------------------
 
-void getTraficLoad(int act_min)
-{
-    FILE *fp;
-    fp = fopen("LoadDiagram.txt", "r");
-    char *line = NULL;
-    size_t len = 0;
-    bool readDiagram = true;
-
-    if (fp == NULL)
-    {
+void getTraficLoad(int act_min) {
+    FILE* fp = fopen("LoadDiagram.txt", "r");
+    if (fp == NULL) {
         perror("Error opening file");
         return;
     }
 
+    char line[1024];
+    bool readDiagram = true;
+
     // Čtení prvního řádku souboru
-    if (getline(&line, &len, fp) != -1)
-    {
-        char *pch = strtok(line, " ");
-        if (pch != NULL)
-        {
-            char *value = strtok(NULL, " ");
-            if (value != NULL)
-            {
+    if (fgets(line, sizeof(line), fp) != NULL) {
+        char* pch = strtok(line, " ");
+        if (pch != NULL) {
+            char* value = strtok(NULL, " ");
+            if (value != NULL) {
                 value[strcspn(value, "\r\n")] = '\0';
-                if (strcmp(value, "-1") == 0)
-                {
-                    readDiagram = true; //-1 čte soubor
-                }
-                else
-                {
-                    act_load = atof(value); // Pokud není -1
+                if (strcmp(value, "-1") == 0) {
+                    readDiagram = true; // Pokud hodnota je -1, čte diagram
+                } else {
+                    act_load = atof(value); // Pokud není -1, nastaví aktuální hodnotu
                     readDiagram = false;
                 }
             }
         }
     }
-    while (getline(&line, &len, fp) != -1 && readDiagram)
-    {
-        char *minute = strtok(line, " ");
-        char *load = strtok(NULL, " ");
 
-        if (minute != NULL && load != NULL)
-        {
+
+    while (fgets(line, sizeof(line), fp) != NULL && readDiagram) {
+        char* minute = strtok(line, " ");
+        char* load = strtok(NULL, " ");
+
+        if (minute != NULL && load != NULL) {
             minute[strcspn(minute, "\r\n")] = '\0';
             load[strcspn(load, "\r\n")] = '\0';
 
-            if (atoi(minute) == act_min)
-            {
+            if (atoi(minute) == act_min) {
                 act_load = atof(load);
-                break; // nalezena
+                break; // Hodnota nalezena
             }
         }
     }
@@ -557,7 +510,7 @@ void LogOver01()
 }
 // zkrat
 
-void LogOver01()
+void LogshortCircuit()
 {
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
@@ -606,7 +559,7 @@ int main()
             // printf("Time now: %02d:%02d:%02d \n", tm.tm_hour, tm.tm_min, tm.tm_sec);
             dayInMinutes = (tm.tm_hour * 60) + tm.tm_min;
             printf("Time now: %i \n", dayInMinutes);
-            Thread_sleep(10);            // uspání na 10 mls
+            Sleep(200);
             getTraficLoad(dayInMinutes); // nacteni act_load ze souboru
             printf("act_load je: %f \n", act_load);
 
@@ -633,7 +586,7 @@ int main()
                 sendRecovery=true;
             }
 
-            
+
 
             // podpětí
             else if (scenar == 0 && (underovervoltagecounter < BREAKER_DELAY))
@@ -690,7 +643,7 @@ int main()
                 }
 
                 variables[0][0] = underovervoltageValue * underovervoltageValuePlus;
-            
+
 
                 if (variables[0][0] < (((variables[0][1] + variables[0][2]) / 2) * 0.9))
                 {
@@ -700,7 +653,7 @@ int main()
                         onehundredfourioa[8][1]= 1;//5004 = 1
                         onehundredfourioa[11][1]= 1;//5011 = 1;
 
-                        
+
                         printf("%f > %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                         underovervoltageValueFlag+=1;
                     }
@@ -767,11 +720,11 @@ int main()
             4002=2->0/3	vypínač není sepnut (ale ještě není ani rozepnut)
             4002=0/3->1	vypínač je rozepnut (nyní je měřený proud 0 A)
             -	odpadnutí oc i tripu po rozepnutí vypínače
-            5001=1->0	
-            5002=1->0	
-            5004, 5006=1->0	
+            5001=1->0
+            5002=1->0
+            5004, 5006=1->0
             5001=0->1	pous o opětovné zapnutí (pulz 150ms)
-            5002=0->1	
+            5002=0->1
             4002=1->0/3	vypínač není rozepnut (ale ještě není sepnut)
             4002=0/3->2	vypínač je sepnut
             5001,5002=1->0	Pouze pokud je pokus o opětovné zapnutí úspěšný. Jinak následuje finální vypnutí
@@ -890,8 +843,8 @@ int main()
             if (probihaiciscenar == false)
             { // P=U_out * I_out * cos(phi) uz nebude z textaku =>
                 // U_out
-                MONITOR_OUT_objects[0] = nahodnehodnoty(MONITOR_OUT_objects[0], MONITOR_OUT_objects[1], MONITOR_OUT_objects[2], MONITOR_OUT_objects[3], 1);
-                monitorOUT[0] = MONITOR_OUT_objects[0];
+                MONITOR_OUT_objects[0][0] = nahodnehodnoty(MONITOR_OUT_objects[0][0], MONITOR_OUT_objects[0][1], MONITOR_OUT_objects[0][2], MONITOR_OUT_objects[0][3], 1);
+                monitorOUT[0] = MONITOR_OUT_objects[0][0];
             }
 
             if (monitorOUT[0] == 0)
@@ -906,11 +859,11 @@ int main()
             monitorOUT[3] = monitorOUT[0] * monitorOUT[1] * (float)sin(TRANSFORMER_POWER_FACTOR * M_PI / 180); // Q=U*I*sin(alfa)
             printf("%f-%f-%f-%f\n", monitorOUT[0], monitorOUT[1], monitorOUT[2], monitorOUT[3]);
 
-            
+
         }
 
         // změna dat, UIQ
-         
+
         //in response time
         if(time_monitorTimer>=PER_RESPONSE_time || alarm>=ALARM_PERIOD_time || sendRecovery==true){
 
@@ -920,7 +873,7 @@ int main()
                 printf("Alarm\n");
             }
             //single values
-            
+
             time_monitorTimer=0;
 
         if (scenar == 6)
@@ -932,6 +885,6 @@ int main()
 
 
 
-    Thread_sleep(1000);
+    Sleep(200);
     return 0;
 }
