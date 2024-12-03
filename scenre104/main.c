@@ -28,7 +28,7 @@ int BREAKER_DELAY;
 int MONITOR_TEMP_FREQ;
 double INPUT_POWER_FACTOR = 1;
 double TRANSFORMER_POWER_FACTOR = 5;
-double dayInMinutes;
+int dayInMinutes=0;
 // zkaladni hodnoty gener
 double variables[4][4]; // U voltige I corrent frequenc
 
@@ -360,13 +360,16 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
 }
 //------------------------
 
+
+
+
+
 void getTraficLoad(int act_min) {
     FILE* fp = fopen("LoadDiagram.txt", "r");
     if (fp == NULL) {
         perror("Error opening file");
         return;
     }
-
     char line[1024];
     bool readDiagram = true;
 
@@ -386,12 +389,12 @@ void getTraficLoad(int act_min) {
             }
         }
     }
+    printf("getTraficLoad readDiagrm:%i \n", readDiagram);
 
 
     while (fgets(line, sizeof(line), fp) != NULL && readDiagram) {
         char* minute = strtok(line, " ");
         char* load = strtok(NULL, " ");
-
         if (minute != NULL && load != NULL) {
             minute[strcspn(minute, "\r\n")] = '\0';
             load[strcspn(load, "\r\n")] = '\0';
@@ -401,8 +404,7 @@ void getTraficLoad(int act_min) {
                 break; // Hodnota nalezena
             }
         }
-    }
-    free(line);
+    }/**/
     fclose(fp);
 }
 
@@ -516,7 +518,10 @@ int main()
 
     bool prestart = true;
     // pr
-    int seconds, time_now, time_tmp, time_monitorTimer;
+    int time_monitorTimer;
+    int seconds;
+    int time_tmp=-1;
+    int time_now;
     double underovervoltageValue = 0, underovervoltageValuePlus = 1;
     int underovervoltagecounter;
     int underovervoltageValueFlag;
@@ -536,8 +541,10 @@ int main()
     while (running)
     {
 
-        seconds = time(NULL) % 60;
+        seconds = time(NULL)%60;
         time_now = seconds;
+
+
 
         // při změně času
         if (time_now != time_tmp)
@@ -545,12 +552,17 @@ int main()
             time_monitorTimer+=1;
             time_tmp = time_now;
 
-            time_t t = time(NULL);
-            struct tm tm = *localtime(&t);
-            // printf("Time now: %02d:%02d:%02d \n", tm.tm_hour, tm.tm_min, tm.tm_sec);
+
+            time_t t = time(NULL); // Získání aktuálního času v sekundách od epochy
+            struct tm tm = *localtime(&t); // Převedení na lokální čas
+
+            printf("Aktualni cas a datum: %02d-%02d-%04d %02d:%02d:%02d\n",
+                   tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900,
+                   tm.tm_hour, tm.tm_min, tm.tm_sec);
+
             dayInMinutes = (tm.tm_hour * 60) + tm.tm_min;
             printf("Time now: %i \n", dayInMinutes);
-            Sleep(200);
+            Sleep(20);
             getTraficLoad(dayInMinutes); // nacteni act_load ze souboru
             printf("act_load je: %f \n", act_load);
 
