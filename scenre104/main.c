@@ -16,7 +16,7 @@
 bool running;
 
 int randomNumber;
-int IPADDRESS[5];
+int IPADDRESS[4];
 int PORT;
 int ORIGINATOR_ADDRESS;
 int COMMON_ADDRESS;
@@ -31,10 +31,7 @@ double TRANSFORMER_POWER_FACTOR = 5;
 double dayInMinutes;
 // zkaladni hodnoty gener
 double variables[4][4]; // U voltige I corrent frequenc
-/*
-double frequency[4]; //f
-double current[4]; //I
-double voltage[4]; //U */
+
 double Q, P;
 float act_load;
 bool probihaiciscenar;
@@ -54,7 +51,7 @@ double holderI;
 double monitorIN[4];  // U, I P Q
 double monitorOUT[4]; //
 double MONITOR_OUT_objects[4][4];
-double MONITOR_TEMPERATURE_object[6];
+double MONITOR_TEMPERATURE_object[7];
 double MONITOR_FREQ_objects[3];
 
 int onehundredfourioa[16][2] = {
@@ -101,98 +98,82 @@ void onehundredfour(){
     onehundredfourioa[15][1];
 }
 
-void nacteni() {
+int nacteni() {
     FILE *fp;
     fp = fopen("MainConfig_server2404.txt", "r");
     if (fp == NULL) {
         printf("Chyba při otevírání souboru.\n");
-        return;
+        return -1; // Signalizace chyby
     }
-
+    printf("Nacteni souboru v poradku.\n");
     char line[1024]; // Pevný buffer pro čtení řádků
     while (fgets(line, sizeof(line), fp) != NULL) {
         char* pch = strtok(line, "=, ;-");
         while (pch != NULL) {
             char ip_address[16];
-
-            if (!(strcmp(pch, "IPADDRESS")))
-            {
+            printf("-.\n");
+            if (!(strcmp(pch, "IPADDRESS"))) {
                 pch = strtok(NULL, "=, ;-");
                 strcpy(ip_address, pch);
 
                 char *token = strtok(ip_address, ".");
                 int i = 0;
-                while (token != NULL)
-                {
+                while (token != NULL) {
                     IPADDRESS[i] = atoi(token); // Převedení části IP adresy na číslo
                     token = strtok(NULL, ".");
                     i++;
                 }
             }
 
-            if (!(strcmp(pch, "PORT")))
-            {
+            if (!(strcmp(pch, "PORT"))) {
                 pch = strtok(NULL, "=, ;-");
                 PORT = atoi(pch);
             }
 
-            if (!(strcmp(pch, "ORIGINATOR_ADDRESS")))
-            {
+            if (!(strcmp(pch, "ORIGINATOR_ADDRESS"))) {
                 pch = strtok(NULL, "=, ;-");
                 ORIGINATOR_ADDRESS = atoi(pch);
             }
 
-            if (!(strcmp(pch, "COMMON_ADDRESS")))
-            {
+            if (!(strcmp(pch, "COMMON_ADDRESS"))) {
                 pch = strtok(NULL, "=, ;-");
                 COMMON_ADDRESS = atoi(pch);
             }
 
-            if (!(strcmp(pch, "DATA_LOGS")))
-            {
+            if (!(strcmp(pch, "DATA_LOGS"))) {
                 pch = strtok(NULL, "=, ;-");
                 DATA_LOGS = atoi(pch);
             }
 
-            if (!(strcmp(pch, "PER_RESPONSE_time")))
-            {
+            if (!(strcmp(pch, "PER_RESPONSE_time"))) {
                 pch = strtok(NULL, "=, ;-");
                 PER_RESPONSE_time = atoi(pch);
             }
 
-            if (!(strcmp(pch, "ALARM_PERIOD_time")))
-            {
+            if (!(strcmp(pch, "ALARM_PERIOD_time"))) {
                 pch = strtok(NULL, "=, ;-");
                 ALARM_PERIOD_time = atoi(pch);
             }
 
-            if (!(strcmp(pch, "FAILURE_EFFECT")))
-            {
+            if (!(strcmp(pch, "FAILURE_EFFECT"))) {
                 pch = strtok(NULL, "=, ;-");
                 FAILURE_EFFECT = atoi(pch);
             }
 
-            if (!(strcmp(pch, "BREAKER_DELAY")))
-            {
+            if (!(strcmp(pch, "BREAKER_DELAY"))) {
                 pch = strtok(NULL, "=, ;-");
                 BREAKER_DELAY = atoi(pch);
             }
 
-            if (!(strcmp(pch, "INPUT_POWER_FACTOR")))
-            {
+            if (!(strcmp(pch, "INPUT_POWER_FACTOR"))) {
                 pch = strtok(NULL, "=, ;-");
                 INPUT_POWER_FACTOR = atof(pch);
             }
 
-            if (!(strcmp(pch, "TRANSFORMER_POWER_FACTOR")))
-            {
+            if (!(strcmp(pch, "TRANSFORMER_POWER_FACTOR"))) {
                 pch = strtok(NULL, "=, ;-");
                 TRANSFORMER_POWER_FACTOR = atof(pch);
             }
-
-            // monitor   VOLTAGE = 220.0; 218-228; 0.01
-            //            CURRENT = 0.5; 96-100; 0.01
-            //           FREQUENCY = 50.0; 45-55; 0.03
 
             if (!(strcmp(pch, "VOLTAGE"))) {
                 for (int j = 0; j < 4; j++) {
@@ -215,40 +196,31 @@ void nacteni() {
                 }
             }
 
-            if (!(strcmp(pch, "MONITOR_OUT_objects")))
-            { // U
+            if (!(strcmp(pch, "MONITOR_OUT_objects"))) {
                 for (int j = 0; j < 4; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_OUT_objects[0][j] = atof(pch);
                 }
             }
 
-            if (!(strcmp(pch, "MONITOR_TEMP_FREQ")))
-            {
+            if (!(strcmp(pch, "MONITOR_TEMP_FREQ"))) {
                 pch = strtok(NULL, "=, ;-");
                 MONITOR_TEMP_FREQ = atoi(pch);
             }
-            /*-MONITOR_OUT_objects = 220.0; 218-222; 0.01
-            MONITOR_TEMP_FREQ = 1
-            MONITOR_TEMPERATURE_object = 102;60-120;29-31
-            MONITOR_FREQ_objects = 49.75-50.25
-            */
 
-            if (!(strcmp(pch, "MONITOR_TEMPERATURE_object")))
-            { // teplota
+            if (!(strcmp(pch, "MONITOR_TEMPERATURE_object"))) {
                 for (int j = 0; j < 7; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_TEMPERATURE_object[j] = atof(pch);
                 }
-
             }
 
-            if (!(strcmp(pch, "MONITOR_FREQ_objects")))
-            { // frekvence
+            if (!(strcmp(pch, "MONITOR_FREQ_objects"))) {
                 for (int j = 0; j < 3; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_FREQ_objects[j] = atof(pch);
                 }
+                printf("Monitor.\n");
             }
             pch = strtok(NULL, "=, ;-");
         }
@@ -537,11 +509,14 @@ int main()
     running = true;
 
     // log
+    printf("Startting\n");
     onehundredfour();
     LogSTART();
+    printf("Startting3\n");
     nacteni();
+    printf("Startting4\n");
     LogSETUP_G();
-
+    printf("Vše načteno\n");
     while (running)
     {
 
@@ -834,6 +809,8 @@ int main()
 
             monitorIN[2] = variables[0][0] * variables[1][0] * (float)sin(INPUT_POWER_FACTOR); // Q_in =U*I*sin(alfa) alfa=10°
             monitorIN[3] = variables[0][0] * variables[1][0] * (float)cos(INPUT_POWER_FACTOR); // P_in =U*I*cos(alfa) alfa=10°
+
+            printf("%f-%f-%f-%f\n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3]);
 
             // uložení do souboru
             snprintf(text, MAX_LENGTH, "Hodnoty jsou: %.5f, %.5f, %.5f, %.5f, ", monitorIN[0], monitorIN[0], monitorIN[0], monitorIN[0]);
