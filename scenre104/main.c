@@ -72,24 +72,6 @@ int onehundredfourioa[16][2] = {
         {5017, 0},
         {5018, 0}
     };
-/*
-4000
-4001
-4002
-4003
-5000
-5001
-5002
-5003
-5004
-5006
-5011
-5012
-5014
-5017
-5018
-*/
-
 //srand(time(NULL));
 
 
@@ -99,30 +81,55 @@ void onehundredfour(){
 }
 
 int nacteni() {
-    FILE *fp;
+
+   FILE *fp;
     fp = fopen("MainConfig_server2404.txt", "r");
     if (fp == NULL) {
         printf("Chyba při otevírání souboru.\n");
         return -1; // Signalizace chyby
     }
     printf("Nacteni souboru v poradku.\n");
-    char line[1024]; // Pevný buffer pro čtení řádků
+    char line[2048];
+    char ip_address[16];
+    //char line[1024]; // Pevný buffer pro čtení řádků
+    int breakthis=0;
+
+    while (fgets(line, sizeof(line), fp) != NULL) {
+        char *pch = strtok(line, "=, ;-");
+        while (pch != NULL) {
+
+    printf("Token: %s\n", pch);
+
+/*
+    FILE *fp = fopen("MainConfig_server2404.txt", "r");
+    if (fp == NULL) {
+        printf("Chyba při otevírání souboru.\n");
+        return -1;
+    }
+    printf("Nacteni souboru v poradku.\n");
+    char ip_address[16];
+    int breakthis=0;
+    char line[2048];
     while (fgets(line, sizeof(line), fp) != NULL) {
         char* pch = strtok(line, "=, ;-");
         while (pch != NULL) {
-            char ip_address[16];
-            printf("-.\n");
+            printf("Token: %s\n", pch);*/
+
+    //....................................
+
             if (!(strcmp(pch, "IPADDRESS"))) {
                 pch = strtok(NULL, "=, ;-");
-                strcpy(ip_address, pch);
-
-                char *token = strtok(ip_address, ".");
-                int i = 0;
-                while (token != NULL) {
-                    IPADDRESS[i] = atoi(token); // Převedení části IP adresy na číslo
-                    token = strtok(NULL, ".");
-                    i++;
+                if (pch != NULL) {
+                    strcpy(ip_address, pch);
+                    char *token = strtok(ip_address, ".");
+                    int i = 0;
+                    while (token != NULL) {
+                        IPADDRESS[i] = atoi(token);
+                        token = strtok(NULL, ".");
+                        i++;
+                    }
                 }
+                printf("IP.\n");
             }
 
             if (!(strcmp(pch, "PORT"))) {
@@ -168,6 +175,7 @@ int nacteni() {
             if (!(strcmp(pch, "INPUT_POWER_FACTOR"))) {
                 pch = strtok(NULL, "=, ;-");
                 INPUT_POWER_FACTOR = atof(pch);
+                printf("IPF.\n");
             }
 
             if (!(strcmp(pch, "TRANSFORMER_POWER_FACTOR"))) {
@@ -180,12 +188,14 @@ int nacteni() {
                     pch = strtok(NULL, "=, ;-");
                     variables[0][j] = atof(pch);
                 }
+                printf("voltage.\n");
             }
 
             if (!(strcmp(pch, "CURRENT"))) {
                 for (int j = 0; j < 4; j++) {
                     pch = strtok(NULL, "=, ;-");
                     variables[1][j] = atof(pch);
+
                 }
             }
 
@@ -197,7 +207,7 @@ int nacteni() {
             }
 
             if (!(strcmp(pch, "MONITOR_OUT_objects"))) {
-                for (int j = 0; j < 4; j++) {
+                for (int j = 0; j < 3; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_OUT_objects[0][j] = atof(pch);
                 }
@@ -209,26 +219,34 @@ int nacteni() {
             }
 
             if (!(strcmp(pch, "MONITOR_TEMPERATURE_object"))) {
-                for (int j = 0; j < 7; j++) {
+                for (int j = 0; j < 6; j++) {
                     pch = strtok(NULL, "=, ;-");
+                    if (pch == NULL) { // Pokud `pch` není platný, ukončete smyčku.
+                        printf("Chybí hodnota pro MONITOR_TEMPERATURE_object[%d]\n", j);
+                        break;
+                    }
                     MONITOR_TEMPERATURE_object[j] = atof(pch);
                 }
+                printf("Monitor T O.\n");
             }
 
             if (!(strcmp(pch, "MONITOR_FREQ_objects"))) {
-                for (int j = 0; j < 3; j++) {
+                for (int j = 0; j < 4; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_FREQ_objects[j] = atof(pch);
                 }
                 printf("Monitor.\n");
             }
+
+
             pch = strtok(NULL, "=, ;-");
         }
     }
     fclose(fp);
+    return 0;
 }
 
-nacteniscenare()
+int nacteniscenare()
 {
     FILE *file;
     char line[256]; // Buffer pro načtení řádku
@@ -509,14 +527,12 @@ int main()
     running = true;
 
     // log
-    printf("Startting\n");
     onehundredfour();
     LogSTART();
-    printf("Startting3\n");
+    printf("nacitani\n");
     nacteni();
-    printf("Startting4\n");
     LogSETUP_G();
-    printf("Vše načteno\n");
+    printf("Vse nacteno\n");
     while (running)
     {
 
