@@ -80,7 +80,7 @@ void onehundredfour(){
     onehundredfourioa[15][1];
 }
 
-int nacteni() {
+int readInput() {
 
    FILE *fp;
     fp = fopen("MainConfig_server2404.txt", "r");
@@ -207,7 +207,7 @@ int nacteni() {
             }
 
             if (!(strcmp(pch, "MONITOR_OUT_objects"))) {
-                for (int j = 0; j < 3; j++) {
+                for (int j = 0; j < 4; j++) {
                     pch = strtok(NULL, "=, ;-");
                     MONITOR_OUT_objects[0][j] = atof(pch);
                 }
@@ -243,6 +243,27 @@ int nacteni() {
         }
     }
     fclose(fp);
+
+    printf("IPADDRESS: %s\n", IPADDRESS);
+    printf("PORT: %d\n", PORT);
+    printf("ORIGINATOR_ADDRESS: %d\n", ORIGINATOR_ADDRESS);
+    printf("COMMON_ADDRESS: %d\n", COMMON_ADDRESS);
+    printf("DATA_LOGS: %d\n", DATA_LOGS);
+    printf("PER_RESPONSE_time: %.2f\n", PER_RESPONSE_time);
+    printf("ALARM_PERIOD_time: %.2f\n", ALARM_PERIOD_time);
+    printf("FAILURE_EFFECT: %d\n", FAILURE_EFFECT);
+    printf("BREAKER_DELAY: %d\n", BREAKER_DELAY);
+    printf("INPUT_POWER_FACTOR: %.2f\n", INPUT_POWER_FACTOR);
+    printf("TRANSFORMER_POWER_FACTOR: %.2f\n", TRANSFORMER_POWER_FACTOR);
+    printf("VOLTAGE: %.2f\n", variables[0][0]);
+    printf("CURRENT: %.2f\n", variables[1][0]);
+    printf("FREQUENCY: %.2f\n", variables[2][0]);
+    printf("MONITOR_OUT_objects: %d\n", MONITOR_OUT_objects);
+    printf("MONITOR_TEMP_FREQ: %d\n", MONITOR_TEMP_FREQ);
+    printf("MONITOR_TEMPERATURE_object: %d\n", MONITOR_TEMPERATURE_object);
+    printf("MONITOR_FREQ_objects: %.2f\n", MONITOR_FREQ_objects);
+
+
     return 0;
 }
 
@@ -287,17 +308,29 @@ int nacteniscenare()
 
 //--------------------------------------------------------------------------------------------------------------
 
-double nahodnehodnoty(double aktual, double min, double max, double step, int scenar)
+double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
 {
     randomNumber = rand() % 3;
 
+    printf("aktual = %lf\n", aktual);
+    printf("min = %lf\n", min);
+    printf("max = %lf\n", max);
+    printf("step = %lf\n", step);
+    printf("scener = %lf\n", scenare);
+
+    if (step <= 0) {
+        step=0.001;
+    }
+
     int n = (int)((max - min) / step) + 1;
     int size = n;
-
+    if (n <= 0) {
+        printf("Chybny rozsah nebo krok!\n");
+        return aktual;
+    }
     // Alokace paměti pro pole
     double *array = (double *)malloc(n * sizeof(double));
-    if (array == NULL)
-    {
+    if (array == NULL) {
         printf("Chyba při alokaci paměti!\n");
         exit(1);
     }
@@ -306,13 +339,7 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
     double current = min;
     for (int i = 0; i < n; i++)
     {
-        array[i] = current;
-        current += step;
-        // Oprava možné chyby zaokrouhlování
-        if (current > max)
-        {
-            array[i] = max;
-        }
+        array[i] = min + i * step;
     }
 
     for (int i = 0; i < size; i++)
@@ -327,12 +354,12 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
             aktual = array[i - 1];
             i = size;
         }
-        else if (aktual == array[i] && scenar == 0)
+        else if (aktual == array[i] && scenare == 0)
         {
             aktual = array[i - 1];
             i = size;
         }
-        else if (aktual == array[i] && scenar == 2)
+        else if (aktual == array[i] && scenare == 2)
         {
             aktual = array[i + 1];
             i = size;
@@ -347,7 +374,7 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
                 aktual = array[i - 1];
                 break;
             case 2:
-                aktual = array[i - 1];
+                aktual = array[i + 1];
                 break;
             default:
                 break;
@@ -356,6 +383,7 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
         }
     }
 
+    free(array);
     return (aktual);
 }
 //------------------------
@@ -535,7 +563,7 @@ int main()
     onehundredfour();
     LogSTART();
     printf("nacitani\n");
-    nacteni();
+    readInput();
     LogSETUP_G();
     printf("Vse nacteno\n");
     while (running)
@@ -838,7 +866,7 @@ int main()
             monitorIN[2] = variables[0][0] * variables[1][0] * (float)sin(INPUT_POWER_FACTOR); // Q_in =U*I*sin(alfa) alfa=10°
             monitorIN[3] = variables[0][0] * variables[1][0] * (float)cos(INPUT_POWER_FACTOR); // P_in =U*I*cos(alfa) alfa=10°
 
-            printf("%f-%f-%f-%f\n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3]);
+            printf("U %f; I: %f; Q: %f; P: %f\n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3]);
 
             // uložení do souboru
             snprintf(text, MAX_LENGTH, "Hodnoty jsou: %.5f, %.5f, %.5f, %.5f, ", monitorIN[0], monitorIN[0], monitorIN[0], monitorIN[0]);
@@ -879,7 +907,10 @@ int main()
             }
             //single values
 
-            time_monitorTimer=0;
+            //time_monitorTimer=0;
+
+            //dočasne
+            scenar=6;
 
         if (scenar == 6)
         {
