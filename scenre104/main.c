@@ -291,7 +291,7 @@ int nacteniscenare()
 
 //--------------------------------------------------------------------------------------------------------------
 
-double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
+/*double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
 {
     randomNumber = rand() % 2; //3;
     randomNumber +=1;
@@ -340,12 +340,12 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
         }
         else if ((aktual == array[i]) && (scenare == 0))
         {
-            aktual = array[i - 1];
+            aktual = array[i - 10];
             i = size;
         }
         else if ((aktual == array[i]) && (scenare == 2))
         {
-            aktual = array[i + 1];
+            aktual = array[i + 10];
             i = size;
         }
         else if (aktual == array[i])
@@ -370,7 +370,73 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
     printf("aktual = %lf\n-----\n", aktual);
     free(array);
     return (aktual);
+}*/
+
+double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
+{
+    randomNumber = rand() % 2; //3;
+    randomNumber +=1;
+    printf("random = %d\n", randomNumber);
+    printf("aktual = %lf\n", aktual);
+    printf("min = %lf\n", min);
+    printf("max = %lf\n", max);
+    printf("step = %lf\n", step);
+    printf("scenar = %d\n", scenare);
+
+    if (step <= 0) {
+        step=0.001;
+    }
+
+    int n = (int)((max - min) / step) + 1;
+    int size = n;
+    if (n <= 0) {
+        printf("Chybny rozsah nebo krok!\n");
+        return aktual;
+    }
+
+
+        if ((aktual <= min) && (scenare != 0))
+        {
+            aktual += step;
+
+        }
+        else if ((aktual >= max) && (scenare != 2))
+        {
+            aktual -= step;
+
+        }
+        else if(scenare == 0)
+        {
+            aktual -= step* 10;
+        }
+        else if (scenare == 2)
+        {
+            aktual += step* 10;
+        }
+        else
+        {
+            switch (randomNumber)
+            {
+                case 0:
+                    break;
+                case 1:
+                    aktual = aktual -= step;
+                break;
+                case 2:
+                    aktual = aktual += step;
+                break;
+                default:
+                    break;
+            }
+
+        }
+
+
+    printf("aktual = %lf\n-----\n", aktual);
+
+    return (aktual);
 }
+
 //------------------------
 
 
@@ -623,7 +689,7 @@ int main()
             }
 
             // prepeti
-            if (scenar == 2 && (underovervoltagecounter < BREAKER_DELAY))
+            else if (scenar == 2 && (underovervoltagecounter < BREAKER_DELAY))
             {
 
                 if (overvoltage == false)
@@ -643,7 +709,7 @@ int main()
             }
 
             // podpeti prepeti
-            if (((overvoltage == true) || (undervoltage == true)) && (underovervoltagecounter >= BREAKER_DELAY))
+            else if (((overvoltage == true) || (undervoltage == true)) && (underovervoltagecounter >= BREAKER_DELAY))
             {
 
                 if ((underovervoltageValuePlus != 0.9) && undervoltage == true)
@@ -671,6 +737,8 @@ int main()
 
                         printf("%f > %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                         underovervoltageValueFlag+=1;
+
+                        scenar = 6;
                     }
                 }
                 else if (variables[0][0] < (((variables[0][1] + variables[0][2]) / 2) * 0.95))
@@ -693,6 +761,7 @@ int main()
                     //zapsani 5004 = 0; 50012=0;
                     printf("%f < %f", ((variables[0][1] + variables[0][2]) / 2),variables[0][0]);
                     underovervoltageValueFlag+=1;
+                        scenar = 6;
                     }
                 }
                 else if (variables[0][0] > (((variables[0][1] + variables[0][2]) / 2) * 1.05))
@@ -749,7 +818,7 @@ int main()
 
             // zkrat 1
             // zkrat 2
-            if ((scenar == 3 || scenar == 4))
+            else if ((scenar == 3 || scenar == 4))
             {
 
                 // odpočet prvních 5
@@ -856,7 +925,7 @@ int main()
             monitorIN[2] = variables[0][0] * variables[1][4] * (float)sin(INPUT_POWER_FACTOR); // Q_in =U*I*sin(alfa) alfa=10°
             monitorIN[3] = variables[0][0] * variables[1][4] * (float)cos(INPUT_POWER_FACTOR); // P_in =U*I*cos(alfa) alfa=10°
 
-            printf("U %f; I: %f; Q: %f; P: %f\n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3]);
+            printf("U %f; I: %f; Q: %f; P: %f, f: %f \n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3], variables[2][0]);
 
             // uložení do souboru
             snprintf(text, MAX_LENGTH, "Hodnoty jsou: %.5f, %.5f, %.5f, %.5f, ", monitorIN[0], monitorIN[0], monitorIN[0], monitorIN[0]);
