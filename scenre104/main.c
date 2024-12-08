@@ -98,23 +98,6 @@ int readInput() {
         char *pch = strtok(line, "=, ;-");
         while (pch != NULL) {
 
-    printf("Token: %s\n", pch);
-
-/*
-    FILE *fp = fopen("MainConfig_server2404.txt", "r");
-    if (fp == NULL) {
-        printf("Chyba při otevírání souboru.\n");
-        return -1;
-    }
-    printf("Nacteni souboru v poradku.\n");
-    char ip_address[16];
-    int breakthis=0;
-    char line[2048];
-    while (fgets(line, sizeof(line), fp) != NULL) {
-        char* pch = strtok(line, "=, ;-");
-        while (pch != NULL) {
-            printf("Token: %s\n", pch);*/
-
     //....................................
 
             if (!(strcmp(pch, "IPADDRESS"))) {
@@ -221,7 +204,7 @@ int readInput() {
             if (!(strcmp(pch, "MONITOR_TEMPERATURE_object"))) {
                 for (int j = 0; j < 6; j++) {
                     pch = strtok(NULL, "=, ;-");
-                    if (pch == NULL) { // Pokud `pch` není platný, ukončete smyčku.
+                    if (pch == NULL) {
                         printf("Chybí hodnota pro MONITOR_TEMPERATURE_object[%d]\n", j);
                         break;
                     }
@@ -244,7 +227,7 @@ int readInput() {
     }
     fclose(fp);
 
-    printf("IPADDRESS: %s\n", IPADDRESS);
+    //printf("IPADDRESS: %s.%s.%s.%s\n", IPADDRESS[0], IPADDRESS[1], IPADDRESS[2], IPADDRESS[3]);
     printf("PORT: %d\n", PORT);
     printf("ORIGINATOR_ADDRESS: %d\n", ORIGINATOR_ADDRESS);
     printf("COMMON_ADDRESS: %d\n", COMMON_ADDRESS);
@@ -258,10 +241,10 @@ int readInput() {
     printf("VOLTAGE: %.2f\n", variables[0][0]);
     printf("CURRENT: %.2f\n", variables[1][0]);
     printf("FREQUENCY: %.2f\n", variables[2][0]);
-    printf("MONITOR_OUT_objects: %d\n", MONITOR_OUT_objects);
+    printf("MONITOR_OUT_objects: %.2f\n", MONITOR_OUT_objects[0][0]);
     printf("MONITOR_TEMP_FREQ: %d\n", MONITOR_TEMP_FREQ);
-    printf("MONITOR_TEMPERATURE_object: %d\n", MONITOR_TEMPERATURE_object);
-    printf("MONITOR_FREQ_objects: %.2f\n", MONITOR_FREQ_objects);
+    printf("MONITOR_TEMPERATURE_object: %.2f\n", MONITOR_TEMPERATURE_object[1]);
+    printf("MONITOR_FREQ_objects: %.2f\n", MONITOR_FREQ_objects[1]);
 
 
     return 0;
@@ -291,7 +274,7 @@ int nacteniscenare()
         if (*ptr)
         {
             scenar = strtol(ptr, NULL, 10);
-            printf("Hodnota proměnné 'scenar' je: %d\n", scenar);
+            printf("Hodnota promenne 'scenar' je: %d\n", scenar);
         }
         else
         {
@@ -310,13 +293,14 @@ int nacteniscenare()
 
 double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
 {
-    randomNumber = rand() % 3;
-
+    randomNumber = rand() % 2; //3;
+    randomNumber +=1;
+    printf("random = %d\n", randomNumber);
     printf("aktual = %lf\n", aktual);
     printf("min = %lf\n", min);
     printf("max = %lf\n", max);
     printf("step = %lf\n", step);
-    printf("scener = %lf\n", scenare);
+    printf("scenar = %d\n", scenare);
 
     if (step <= 0) {
         step=0.001;
@@ -341,25 +325,25 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
     {
         array[i] = min + i * step;
     }
-
+    //generovani
     for (int i = 0; i < size; i++)
     {
-        if (aktual == min)
+        if ((aktual == min) && (scenare != 0))
         {
             aktual = array[i + 1];
             i = size;
         }
-        else if (aktual == max)
+        else if ((aktual == max) && (scenare == 2))
         {
             aktual = array[i - 1];
             i = size;
         }
-        else if (aktual == array[i] && scenare == 0)
+        else if ((aktual == array[i]) && (scenare == 0))
         {
             aktual = array[i - 1];
             i = size;
         }
-        else if (aktual == array[i] && scenare == 2)
+        else if ((aktual == array[i]) && (scenare == 2))
         {
             aktual = array[i + 1];
             i = size;
@@ -383,6 +367,7 @@ double nahodnehodnoty(double aktual, double min, double max, double step, int sc
         }
     }
 
+    printf("aktual = %lf\n-----\n", aktual);
     free(array);
     return (aktual);
 }
@@ -622,7 +607,6 @@ int main()
             // podpětí
             else if (scenar == 0 && (underovervoltagecounter < BREAKER_DELAY))
             {
-
                 if (undervoltage == false)
                 {
                     underovervoltageValue = variables[0][0];
@@ -826,6 +810,7 @@ int main()
                         else if (scenar == 4)
                         {
                             variables[1][0] = 0;
+                            variables[1][4] = 0;
                             printf("Short Circuit: I=0");
                         }
                         shortCircuitphase += 1;
@@ -841,30 +826,35 @@ int main()
                     {
 
                         variables[1][0] = 0;
+                        variables[1][4] = 0;
                     }
                 }
             }
+
 
             // monitory a ukládání
             // změna proměnných
 
             if (probihaiciscenar == false)
             {
+                printf("pocitani promennych U \n");
                 // double aktual, double min, double max, double step
                 variables[0][0] = nahodnehodnoty(variables[0][0], variables[0][1], variables[0][2], variables[0][3], 1); // U
             }
             if (probihaiciscenarI == false)
             {
-                variables[1][0] = nahodnehodnoty(variables[1][0], variables[1][1], variables[1][2], variables[1][3], 1) * act_load; // I
+                variables[1][0] = nahodnehodnoty(variables[1][0], variables[1][1], variables[1][2], variables[1][3], 1) ; // I
+
             }
+            variables[1][4] = variables[1][0]* act_load;
             variables[2][0] = nahodnehodnoty(variables[2][0], variables[2][1], variables[2][2], variables[2][3], 1); // frequency
 
             // u, i, p, q
             monitorIN[0] = variables[0][0];
-            monitorIN[1] = variables[1][0];
+            monitorIN[1] = variables[1][4];
 
-            monitorIN[2] = variables[0][0] * variables[1][0] * (float)sin(INPUT_POWER_FACTOR); // Q_in =U*I*sin(alfa) alfa=10°
-            monitorIN[3] = variables[0][0] * variables[1][0] * (float)cos(INPUT_POWER_FACTOR); // P_in =U*I*cos(alfa) alfa=10°
+            monitorIN[2] = variables[0][0] * variables[1][4] * (float)sin(INPUT_POWER_FACTOR); // Q_in =U*I*sin(alfa) alfa=10°
+            monitorIN[3] = variables[0][0] * variables[1][4] * (float)cos(INPUT_POWER_FACTOR); // P_in =U*I*cos(alfa) alfa=10°
 
             printf("U %f; I: %f; Q: %f; P: %f\n", monitorIN[0], monitorIN[1], monitorIN[2], monitorIN[3]);
 
@@ -890,7 +880,7 @@ int main()
             }
             monitorOUT[2] = monitorOUT[0] * monitorOUT[1] * (float)cos(TRANSFORMER_POWER_FACTOR * M_PI / 180); // P=U*I*cos(alfa)
             monitorOUT[3] = monitorOUT[0] * monitorOUT[1] * (float)sin(TRANSFORMER_POWER_FACTOR * M_PI / 180); // Q=U*I*sin(alfa)
-            printf("%f-%f-%f-%f\n", monitorOUT[0], monitorOUT[1], monitorOUT[2], monitorOUT[3]);
+            printf("%f; %f; %f; %f\n", monitorOUT[0], monitorOUT[1], monitorOUT[2], monitorOUT[3]);
 
 
         }
@@ -909,14 +899,15 @@ int main()
 
             //time_monitorTimer=0;
 
-            //dočasne
-            scenar=6;
 
+            }
+            //dočasne
+            //scenar=6;
         if (scenar == 6)
         {
             running = false;
         }
-        }
+
     }
 
 
