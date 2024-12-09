@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"lib60870-C/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Development",
+			"destination" : "include/lib60870",
+			"paths" : 
+			[
+				"lib60870-C/src/hal/inc/hal_time.h",
+				"lib60870-C/src/hal/inc/hal_thread.h",
+				"lib60870-C/src/hal/inc/hal_socket.h",
+				"lib60870-C/src/hal/inc/hal_serial.h",
+				"lib60870-C/src/hal/inc/tls_config.h",
+				"lib60870-C/src/inc/api/cs101_master.h",
+				"lib60870-C/src/inc/api/cs101_slave.h",
+				"lib60870-C/src/inc/api/cs104_slave.h",
+				"lib60870-C/src/inc/api/iec60870_master.h",
+				"lib60870-C/src/inc/api/iec60870_slave.h",
+				"lib60870-C/src/inc/api/iec60870_common.h",
+				"lib60870-C/src/inc/api/cs101_information_objects.h",
+				"lib60870-C/src/inc/api/cs104_connection.h",
+				"lib60870-C/src/inc/api/link_layer_parameters.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib60870-C",
+		"source" : "lib60870-C"
+	}
+}

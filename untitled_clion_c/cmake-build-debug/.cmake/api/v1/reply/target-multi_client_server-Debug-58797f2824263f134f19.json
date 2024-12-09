@@ -1,0 +1,227 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib60870-C/examples/multi_client_server/multi_client_server"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"lib60870-C/examples/multi_client_server/CMakeLists.txt",
+			"lib60870-C/src/CMakeLists.txt",
+			"CMakeLists.txt",
+			"lib60870-C/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 132,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 11,
+				"parent" : 5
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 45,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 54,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=gnu2x"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "CONFIG_CS104_SUPPORT_TLS=1"
+				},
+				{
+					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls_config.h\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/api"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/config"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/internal"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/common/inc"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/multi_client_server/."
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "lib60870::@fc00ee6daa2fde5f51d1"
+		}
+	],
+	"id" : "multi_client_server::@18fb55416c388182d54b",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/liblib60870.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "multi_client_server",
+	"nameOnDisk" : "multi_client_server",
+	"paths" : 
+	{
+		"build" : "lib60870-C/examples/multi_client_server",
+		"source" : "lib60870-C/examples/multi_client_server"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib60870-C/examples/multi_client_server/multi_client_server.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Development",
+			"destination" : "include/lib60870",
+			"paths" : 
+			[
+				"src/hal/inc/hal_time.h",
+				"src/hal/inc/hal_thread.h",
+				"src/hal/inc/hal_socket.h",
+				"src/hal/inc/hal_serial.h",
+				"src/hal/inc/tls_config.h",
+				"src/inc/api/cs101_master.h",
+				"src/inc/api/cs101_slave.h",
+				"src/inc/api/cs104_slave.h",
+				"src/inc/api/iec60870_master.h",
+				"src/inc/api/iec60870_slave.h",
+				"src/inc/api/iec60870_common.h",
+				"src/inc/api/cs101_information_objects.h",
+				"src/inc/api/cs104_connection.h",
+				"src/inc/api/link_layer_parameters.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

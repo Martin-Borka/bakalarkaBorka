@@ -1,0 +1,421 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib60870-C",
+					"childIndexes" : 
+					[
+						2,
+						13,
+						14
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib60870-C-Debug-4161b363d69a2756809a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib60870-C"
+				},
+				{
+					"build" : "lib60870-C/examples",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-lib60870-C.examples-Debug-f683b9af5ef21fb2e719.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples"
+				},
+				{
+					"build" : "lib60870-C/examples/cs101_master_balanced",
+					"jsonFile" : "directory-lib60870-C.examples.cs101_master_balanced-Debug-50440573762d92ebd645.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs101_master_balanced",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs101_master_unbalanced",
+					"jsonFile" : "directory-lib60870-C.examples.cs101_master_unbalanced-Debug-760bd5d561872ab697bd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs101_master_unbalanced",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs101_slave",
+					"jsonFile" : "directory-lib60870-C.examples.cs101_slave-Debug-8b7399964ad37e10630b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs101_slave",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs104_client",
+					"jsonFile" : "directory-lib60870-C.examples.cs104_client-Debug-5a5feb66e65573eb99c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs104_client",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs104_server",
+					"jsonFile" : "directory-lib60870-C.examples.cs104_server-Debug-949962c3841c772274a0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs104_server",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs104_server_no_threads",
+					"jsonFile" : "directory-lib60870-C.examples.cs104_server_no_threads-Debug-ff1008c7131a8861166f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs104_server_no_threads",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/cs104_redundancy_server",
+					"jsonFile" : "directory-lib60870-C.examples.cs104_redundancy_server-Debug-fd2f9fa7aff458058972.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/cs104_redundancy_server",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/multi_client_server",
+					"jsonFile" : "directory-lib60870-C.examples.multi_client_server-Debug-b4fad60d9ba422ea6a42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/multi_client_server",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/tls_client",
+					"jsonFile" : "directory-lib60870-C.examples.tls_client-Debug-abecbd27274cc18e3a34.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/tls_client",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "lib60870-C/examples/tls_server",
+					"jsonFile" : "directory-lib60870-C.examples.tls_server-Debug-51733deff78a8b8f4748.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/examples/tls_server",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "lib60870-C/tests",
+					"jsonFile" : "directory-lib60870-C.tests-Debug-32d010aebee5581d51d0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/tests",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "lib60870-C/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib60870-C.src-Debug-b3b295870091a2401737.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib60870-C/src",
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "borka_bp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					],
+					"name" : "lib60870-C",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "borka_bp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-borka_bp-Debug-f59ecb27f8cc84fcd972.json",
+					"name" : "borka_bp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "cs101_master_balanced::@323d8fdb8d6e7a2dfae1",
+					"jsonFile" : "target-cs101_master_balanced-Debug-e2246854bac397c707ae.json",
+					"name" : "cs101_master_balanced",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "cs101_master_unbalanced::@b9b0e9b250b1a35d6bfc",
+					"jsonFile" : "target-cs101_master_unbalanced-Debug-a53ebef54eb86d527884.json",
+					"name" : "cs101_master_unbalanced",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "cs101_slave::@74eabdddfccdabc5e893",
+					"jsonFile" : "target-cs101_slave-Debug-29c65dd5d96a50257884.json",
+					"name" : "cs101_slave",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "cs104_redundancy_server::@1813406fde1807fe9c9a",
+					"jsonFile" : "target-cs104_redundancy_server-Debug-1130824fd8361d55994f.json",
+					"name" : "cs104_redundancy_server",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "cs104_server::@87dde47e735e29755735",
+					"jsonFile" : "target-cs104_server-Debug-bbd2246b8b6ff218e338.json",
+					"name" : "cs104_server",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "cs104_server_no_threads::@97441ab42edb83813930",
+					"jsonFile" : "target-cs104_server_no_threads-Debug-c1a97a57e373b5609c98.json",
+					"name" : "cs104_server_no_threads",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "lib60870::@fc00ee6daa2fde5f51d1",
+					"jsonFile" : "target-lib60870-Debug-70ad3817c1f59eb42578.json",
+					"name" : "lib60870",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "lib60870-shared::@fc00ee6daa2fde5f51d1",
+					"jsonFile" : "target-lib60870-shared-Debug-4d28f2b8e1aaa67b410a.json",
+					"name" : "lib60870-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "multi_client_server::@18fb55416c388182d54b",
+					"jsonFile" : "target-multi_client_server-Debug-58797f2824263f134f19.json",
+					"name" : "multi_client_server",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "simple_client::@81e367b98b67e4a5341a",
+					"jsonFile" : "target-simple_client-Debug-c070f097b628cdf27139.json",
+					"name" : "simple_client",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "tests::@7673028569a7862ce122",
+					"jsonFile" : "target-tests-Debug-9b82f7af242a87f5cad0.json",
+					"name" : "tests",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "tls_client::@41c00367a1eaef6482bd",
+					"jsonFile" : "target-tls_client-Debug-beb94f036c37f43e2dad.json",
+					"name" : "tls_client",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "tls_server::@f97657354fa1c83c0bc4",
+					"jsonFile" : "target-tls_server-Debug-59d2364db81695f39202.json",
+					"name" : "tls_server",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug",
+		"source" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

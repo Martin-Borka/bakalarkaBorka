@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/borka_bp.dir/src/s_server.c.o -o borka_bp  lib60870-C/src/liblib60870.a -lm -lpthread -lm -lrt 

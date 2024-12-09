@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/multi_client_server.dir/multi_client_server.c.o -o multi_client_server  ../../src/liblib60870.a -lpthread -lm -lrt 

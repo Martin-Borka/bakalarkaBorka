@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/tls_client.dir/tls_client.c.o -o tls_client  ../../src/liblib60870.a -lpthread -lm -lrt 

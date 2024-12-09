@@ -1,0 +1,1 @@
+/home/petr/.nix-profile/bin/cc -g -rdynamic CMakeFiles/simple_client.dir/simple_client.c.o -o simple_client  ../../src/liblib60870.a -lpthread -lm -lrt

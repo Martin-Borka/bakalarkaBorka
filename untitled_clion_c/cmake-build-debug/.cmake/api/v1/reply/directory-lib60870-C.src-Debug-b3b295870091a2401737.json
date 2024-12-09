@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"lib60870-C/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 151,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib60870-C/src/liblib60870.a"
+			],
+			"targetId" : "lib60870::@fc00ee6daa2fde5f51d1",
+			"targetIndex" : 7,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib60870-C/src/liblib60870.so.2.2.0"
+			],
+			"targetId" : "lib60870-shared::@fc00ee6daa2fde5f51d1",
+			"targetIndex" : 8,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib60870-C/src/liblib60870.so"
+			],
+			"targetId" : "lib60870-shared::@fc00ee6daa2fde5f51d1",
+			"targetIndex" : 8,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib60870-C/src",
+		"source" : "lib60870-C/src"
+	}
+}

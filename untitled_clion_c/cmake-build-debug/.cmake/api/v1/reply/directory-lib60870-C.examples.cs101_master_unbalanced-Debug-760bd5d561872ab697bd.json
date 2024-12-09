@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib60870-C/examples/cs101_master_unbalanced",
+		"source" : "lib60870-C/examples/cs101_master_unbalanced"
+	}
+}

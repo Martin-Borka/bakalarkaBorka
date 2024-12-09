@@ -1,8 +1,0 @@
-0
-
-
-podpětí             0
-klidný stav         1
-prepeti             2
-zkrat               3
-zkrat               4

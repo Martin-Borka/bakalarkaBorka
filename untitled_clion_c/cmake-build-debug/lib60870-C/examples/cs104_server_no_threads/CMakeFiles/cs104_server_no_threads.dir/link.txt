@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/cs104_server_no_threads.dir/cs104_server_no_threads.c.o -o cs104_server_no_threads  ../../src/liblib60870.a -lpthread -lm -lrt 

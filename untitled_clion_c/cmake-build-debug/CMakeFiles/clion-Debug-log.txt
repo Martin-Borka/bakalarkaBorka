@@ -1,0 +1,12 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c -B /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMake Deprecation Warning at lib60870-C/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug

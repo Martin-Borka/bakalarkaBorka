@@ -1,0 +1,1 @@
+/home/petr/.nix-profile/bin/cc -g -rdynamic CMakeFiles/cs104_redundancy_server.dir/cs104_redundancy_server.c.o -o cs104_redundancy_server  ../../src/liblib60870.a -lpthread -lm -lrt

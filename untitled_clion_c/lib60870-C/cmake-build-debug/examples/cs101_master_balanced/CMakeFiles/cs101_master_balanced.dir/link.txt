@@ -1,0 +1,1 @@
+/home/petr/.nix-profile/bin/cc -g -rdynamic CMakeFiles/cs101_master_balanced.dir/master_example.c.o -o cs101_master_balanced  ../../src/liblib60870.a -lpthread -lm -lrt

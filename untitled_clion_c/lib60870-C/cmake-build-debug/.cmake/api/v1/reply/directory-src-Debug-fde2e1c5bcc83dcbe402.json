@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 151,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/liblib60870.a"
+			],
+			"targetId" : "lib60870::@145eef247bfb46b6828c",
+			"targetIndex" : 6,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/liblib60870.so.2.2.0"
+			],
+			"targetId" : "lib60870-shared::@145eef247bfb46b6828c",
+			"targetIndex" : 7,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Libraries",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/liblib60870.so"
+			],
+			"targetId" : "lib60870-shared::@145eef247bfb46b6828c",
+			"targetIndex" : 7,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	}
+}

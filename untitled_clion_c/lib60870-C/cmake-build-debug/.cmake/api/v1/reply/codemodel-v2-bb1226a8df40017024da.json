@@ -1,0 +1,378 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						12,
+						13
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-deeb23f327025c6cbc00.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "examples",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "examples/cs101_master_balanced",
+					"jsonFile" : "directory-examples.cs101_master_balanced-Debug-e1ef680b6c2cea8f1165.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs101_master_balanced",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "examples/cs101_master_unbalanced",
+					"jsonFile" : "directory-examples.cs101_master_unbalanced-Debug-1ade8ff2c780da6d499e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs101_master_unbalanced",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "examples/cs101_slave",
+					"jsonFile" : "directory-examples.cs101_slave-Debug-99cabb61353d56d08f5e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs101_slave",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "examples/cs104_client",
+					"jsonFile" : "directory-examples.cs104_client-Debug-b529d1bdcfba0c04eaa5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs104_client",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "examples/cs104_server",
+					"jsonFile" : "directory-examples.cs104_server-Debug-fa0452a8be5f5b909c20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs104_server",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "examples/cs104_server_no_threads",
+					"jsonFile" : "directory-examples.cs104_server_no_threads-Debug-c899f3e929ab213d162e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs104_server_no_threads",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "examples/cs104_redundancy_server",
+					"jsonFile" : "directory-examples.cs104_redundancy_server-Debug-ca1979a39f5791a66a36.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/cs104_redundancy_server",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "examples/multi_client_server",
+					"jsonFile" : "directory-examples.multi_client_server-Debug-6fb214637dc6e6e04ff2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/multi_client_server",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "examples/tls_client",
+					"jsonFile" : "directory-examples.tls_client-Debug-7c64dae9fe2c209435c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/tls_client",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "examples/tls_server",
+					"jsonFile" : "directory-examples.tls_server-Debug-1a11a4d09e34b2791eec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "examples/tls_server",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-fde2e1c5bcc83dcbe402.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					],
+					"name" : "lib60870-C",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "cs101_master_balanced::@14b656a51e55fc59e88a",
+					"jsonFile" : "target-cs101_master_balanced-Debug-dc86d806b71ebdb4a5f4.json",
+					"name" : "cs101_master_balanced",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "cs101_master_unbalanced::@5a5bdddabeb2996919a8",
+					"jsonFile" : "target-cs101_master_unbalanced-Debug-a37076d644c47d3ba6d4.json",
+					"name" : "cs101_master_unbalanced",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "cs101_slave::@bfbcb37687c2f4e54c43",
+					"jsonFile" : "target-cs101_slave-Debug-e26abcbb2c1fc5f3c871.json",
+					"name" : "cs101_slave",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "cs104_redundancy_server::@7c6ea5fc27820e8f4fc4",
+					"jsonFile" : "target-cs104_redundancy_server-Debug-2d500e73e72bafaff1c7.json",
+					"name" : "cs104_redundancy_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "cs104_server::@4cfbea11f5186c3eaf2d",
+					"jsonFile" : "target-cs104_server-Debug-377e3f3ba4de08b28ff0.json",
+					"name" : "cs104_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "cs104_server_no_threads::@2d0cce1c5248d1190944",
+					"jsonFile" : "target-cs104_server_no_threads-Debug-70c09c3e8e8417104479.json",
+					"name" : "cs104_server_no_threads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "lib60870::@145eef247bfb46b6828c",
+					"jsonFile" : "target-lib60870-Debug-883815fee590634706ab.json",
+					"name" : "lib60870",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "lib60870-shared::@145eef247bfb46b6828c",
+					"jsonFile" : "target-lib60870-shared-Debug-2312f71db2d414b94549.json",
+					"name" : "lib60870-shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "multi_client_server::@daec287df6db398f3dff",
+					"jsonFile" : "target-multi_client_server-Debug-2d144fe186c018297d9f.json",
+					"name" : "multi_client_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "simple_client::@f9132808569a607e4910",
+					"jsonFile" : "target-simple_client-Debug-97637e9b182b54a920c4.json",
+					"name" : "simple_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "tests::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-tests-Debug-2dd9a910b1d25bcbb144.json",
+					"name" : "tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "tls_client::@17aa8831bfd0ca46f4f0",
+					"jsonFile" : "target-tls_client-Debug-9b28391b525e0f6c41ed.json",
+					"name" : "tls_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "tls_server::@a2461e7adaa59e494bff",
+					"jsonFile" : "target-tls_server-Debug-9097b85722e1a0364105.json",
+					"name" : "tls_server",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/petr/tmp/borka/Fixed/lib60870-C/cmake-build-debug",
+		"source" : "/home/petr/tmp/borka/Fixed/lib60870-C"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
