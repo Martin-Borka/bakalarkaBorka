@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
@@ -49,7 +49,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 19,
+				"line" : 18,
 				"parent" : 0
 			},
 			{

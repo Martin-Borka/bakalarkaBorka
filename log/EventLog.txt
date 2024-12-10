@@ -232,3 +232,7 @@
 2024-12-10 11:02:42 type(36) elements: 4
 2024-12-10 11:02:52 type(36) elements: 4
 2024-12-10 11:02:52 type(36) elements: 4
+2024-12-10 13:57:31 Server stared 
+2024-12-10 13:57:31 Setup OK 
+2024-12-10 13:57:31 type(36) elements: 4
+2024-12-10 13:57:32 type(36) elements: 4
