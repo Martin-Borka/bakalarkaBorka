@@ -13,7 +13,6 @@ include_directories(
         "${CMAKE_CURRENT_SOURCE_DIR}/lib60870-C/src/inc/api"
         "${CMAKE_CURRENT_SOURCE_DIR}/lib60870-C/src/hal/inc"
 )
-#simple_server.c
 #s_server.c
 add_executable(borka_bp src/s_server.c)
 target_compile_definitions(borka_bp PUBLIC MBEDTLS_PLATFORM_C)

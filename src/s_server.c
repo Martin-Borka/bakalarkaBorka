@@ -381,6 +381,29 @@ CS101_ASDU CreateMONITOR_IN_ASDU(CS101_AppLayerParameters alParams, int cot, CP5
     return asdu2Send;
 
 }
+
+CS101_ASDU CreateMONITOR_OUT_ASDU(CS101_AppLayerParameters alParams, int cot, CP56Time2a timestamp){
+
+    asdu2Send = CS101_ASDU_create(alParams, false, cot, ORIGINATOR_ADDRESS, COMMON_ADDRESS, false, false);
+
+
+        for (int j = 0; j < 4; ++j) {
+            InformationObject io = (InformationObject) MeasuredValueShortWithCP56Time2a_create(NULL,NULL,monitorOUT[j],IEC60870_QUALITY_GOOD,timestamp);
+            CS101_ASDU_addInformationObject(asdu2Send, io);
+            if (DATA_LOGS){
+                LogTXwT(InformationObject_getObjectAddress((InformationObject) io),MeasuredValueShort_getValue((MeasuredValueShort) io), timestamp);
+            }
+            //tmpSharedValue=MeasuredValueShort_getValue((MeasuredValueShort) io);
+            printf("    IOA: %i with value: %f \n",monitorOUT[j],MeasuredValueShort_getValue((MeasuredValueShort)io));
+
+            InformationObject_destroy(io);
+        }
+
+
+    return asdu2Send;
+
+}
+
 //---------------------------------------------------------------------------------------
 double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
 {
@@ -526,11 +549,29 @@ void LogTX(int type,int elements){
     struct tm tm = *localtime(&t);
     FILE * fp;
 
-    fp = fopen ("log/log.txt", "a");
+    fp = fopen ("log/EventLog.txt", "a");
     fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d type(%i) elements: %i\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec,type,elements);
     fclose(fp);
 }
 
+void LogRX(int type,int elements){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d type(%i) elements: %i\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec,type,elements);
+    fclose(fp);
+}
+
+void LogRXwoT(int ioa,float value){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d IOA: %i value: %f\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min,
+            tm.tm_sec,ioa,value);
+    fclose(fp);
+}
 // event logs
 void LogSTART()
 {
@@ -560,6 +601,40 @@ void LogSETUP_F()
     fclose(fp);
 }
 
+void LogCONOPEN(){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d Connection opened \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+    fclose(fp);
+}
+
+void LogCONCLOSED(){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d Connection closed \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+    fclose(fp);
+}
+
+void LogCONACT(){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d Connection activated \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+    fclose(fp);
+}
+void LogCONDEACT(){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/EventLog.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d Connection deactivated \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
+    fclose(fp);
+}
 // data logs
 
 // undervoltage overvoltage
@@ -612,6 +687,107 @@ void LogshortCircuit()
     fprintf(fp, "%d-%02d-%02d %02d:%02d:%02d LD0.VMMXU1.HiAlm.stVal \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
     fclose(fp);
 }
+/*
+static bool
+asduHandler(void* parameter, IMasterConnection connection, CS101_ASDU asdu)
+{
+    printf("RECVD ASDU type: %s(%i) elements: %i from klient\n",
+           TypeID_toString(CS101_ASDU_getTypeID(asdu)),
+           CS101_ASDU_getTypeID(asdu),
+           CS101_ASDU_getNumberOfElements(asdu)
+    );
+    if (DATA_LOGS){
+        LogRX(CS101_ASDU_getTypeID(asdu),CS101_ASDU_getNumberOfElements(asdu));
+    }
+
+    if (CS101_ASDU_getTypeID(asdu) == C_SC_NA_1) {  //45
+        int i;
+        receivedCommand=true;
+        for (i = 0; i < CS101_ASDU_getNumberOfElements(asdu); i++) {
+            SingleCommand io = (SingleCommand) CS101_ASDU_getElement(asdu,i);
+            printf("    IOA: %i value: %i\n", InformationObject_getObjectAddress((InformationObject) io), SingleCommand_getState((SingleCommand) io));
+            if (DATA_LOGS){
+                LogRXwoT(InformationObject_getObjectAddress((InformationObject) io), SingleCommand_getState((SingleCommand) io));
+            }
+            /*for (int j = 0; j < monitor2Set; ++j) {
+                if(monitor2[j][0]==InformationObject_getObjectAddress((InformationObject) io)){
+                    monitor2[j][1]=SingleCommand_getState((SingleCommand) io);
+                }
+
+            }
+            SingleCommand_destroy(io);
+        }
+    }
+    else if (CS101_ASDU_getTypeID(asdu) == C_DC_NA_1) {  //46
+        int i;
+
+        for (i = 0; i < CS101_ASDU_getNumberOfElements(asdu); i++) {
+            DoubleCommand io = (DoubleCommand) CS101_ASDU_getElement(asdu,i);
+            printf("    IOA: %i value: %i\n", InformationObject_getObjectAddress((InformationObject) io), DoubleCommand_getState((DoubleCommand)io));
+
+            if (DATA_LOGS){
+                LogRXwoT(InformationObject_getObjectAddress((InformationObject) io), DoubleCommand_getState((DoubleCommand)io));
+            }
+            if(InformationObject_getObjectAddress((InformationObject) io)==4000 || InformationObject_getObjectAddress((InformationObject) io)==4001){
+                receivedCommand=true;
+                if (InformationObject_getObjectAddress((InformationObject) io)==4000 && DoubleCommand_getState((DoubleCommand)io)==2){
+                    offBreakerRemote=true;
+                }else{
+                    offBreakerRemote=false;
+                }
+                if (InformationObject_getObjectAddress((InformationObject) io)==4001 && DoubleCommand_getState((DoubleCommand)io)==1){
+                    offDisconRemote=true;
+                }else{
+                    offDisconRemote=false;
+                }
+            }
+
+            DoubleCommand_destroy(io);
+        }
+    }
+
+    else if (CS101_ASDU_getTypeID(asdu) == C_IC_NA_1) { //100
+        int i;
+        for (i = 0; i < CS101_ASDU_getNumberOfElements(asdu); i++) {
+            InterrogationCommand io = (InterrogationCommand) CS101_ASDU_getElement(asdu,i);
+            if (dataLog){
+                LogRXC(InformationObject_getObjectAddress((InformationObject) io),InterrogationCommand_getQOI((InterrogationCommand)io));
+            }
+
+            if (InterrogationCommand_getQOI((InterrogationCommand)io)==21){
+                printf("Command pro qoi %i\n", InterrogationCommand_getQOI((InterrogationCommand)io));
+                //sendResponse=true;
+
+            }
+            else{
+                printf("    IOA: %i qoi %i\n", InformationObject_getObjectAddress((InformationObject) io),InterrogationCommand_getQOI((InterrogationCommand)io));
+            }
+
+            InterrogationCommand_destroy(io);
+        }
+    }
+
+    else if (CS101_ASDU_getTypeID(asdu) == C_CS_NA_1) {  //103
+        int i;
+        for (i = 0; i < CS101_ASDU_getNumberOfElements(asdu); i++) {
+            ClockSynchronizationCommand io = (ClockSynchronizationCommand) CS101_ASDU_getElement(asdu,i);
+            printf("    IOA: %i with time: ", InformationObject_getObjectAddress((InformationObject) io));
+            printCP56Time2a(ClockSynchronizationCommand_getTime(io));printf("\n");
+            if (dataLog){
+                LogRXT(InformationObject_getObjectAddress((InformationObject) io),
+                        ClockSynchronizationCommand_getTime((ClockSynchronizationCommand)io));
+            }
+            ClockSynchronizationCommand_destroy(io);
+        }
+    }
+
+
+
+    return false;
+}*/
+
+
+
 
 // start
 int main()
@@ -648,11 +824,11 @@ int main()
     CS104_Slave_setLocalPort(slave,PORT);
     //CS104_Slave_createSecure(1,255,TLSConfiguration_create());
 
-    /* set handler to handle connection requests (optional)
-    CS104_Slave_setConnectionRequestHandler(slave, connectionRequestHandler, NULL);*/
+    /* set handler to handle connection requests (optional)*/
+    //CS104_Slave_setConnectionRequestHandler(slave, connectionRequestHandler, NULL);
 
-    /* set handler to track connection events (optional)
-    CS104_Slave_setConnectionEventHandler(slave, connectionEventHandler, NULL);*/
+    /* set handler to track connection events (optional)*/
+    //CS104_Slave_setConnectionEventHandler(slave, connectionEventHandler, NULL);
 
     /* uncomment to log messages */
     //CS104_Slave_setRawMessageHandler(slave, rawMessageHandler, NULL);
@@ -1045,7 +1221,19 @@ int main()
             CS101_ASDU newAsdu = CreateMONITOR_IN_ASDU(alParams, cot,CP56Time2a_createFromMsTimestamp(NULL, Hal_getTimeInMs()));
             CS104_Slave_enqueueASDU(slave, newAsdu);
             CS101_ASDU_destroy(newAsdu);
-            time_monitorTimer=0;
+
+
+
+
+            printf("SENDED ASDU type: 36 elements: %i \n", 4);
+            if (DATA_LOGS){
+                LogTX(36,4);
+            }
+            CS101_ASDU newAsdu2 = CreateMONITOR_OUT_ASDU(alParams, cot,CP56Time2a_createFromMsTimestamp(NULL, Hal_getTimeInMs()));
+            CS104_Slave_enqueueASDU(slave, newAsdu2);
+            CS101_ASDU_destroy(newAsdu2);
+
+time_monitorTimer=0;
         }
             //dočasne
             //scenar=6;
@@ -1056,8 +1244,9 @@ int main()
 
     }
 
-
-
+    CS104_Slave_stop(slave);
+    exit_program:
+    CS104_Slave_destroy(slave);
     sleep(200);
     return 0;
 }

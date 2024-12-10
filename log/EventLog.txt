@@ -189,3 +189,46 @@
 2024-12-10 09:57:24 LD0.VMMXU1.LoAlm.stVal 
 2024-12-10 09:58:39 Server stared 
 2024-12-10 09:58:39 Setup OK 
+2024-12-10 10:12:39 Server stared 
+2024-12-10 10:12:39 Setup OK 
+2024-12-10 10:37:26 Server stared 
+2024-12-10 10:37:26 Setup OK 
+2024-12-10 10:37:26 type(36) elements: 4
+2024-12-10 10:37:36 type(36) elements: 4
+2024-12-10 10:37:46 type(36) elements: 4
+2024-12-10 10:37:56 type(36) elements: 4
+2024-12-10 10:38:07 type(36) elements: 4
+2024-12-10 10:38:17 type(36) elements: 4
+2024-12-10 10:38:27 type(36) elements: 4
+2024-12-10 10:40:59 Server stared 
+2024-12-10 10:40:59 Setup OK 
+2024-12-10 10:40:59 type(36) elements: 4
+2024-12-10 10:41:09 type(36) elements: 4
+2024-12-10 10:41:19 type(36) elements: 4
+2024-12-10 10:41:29 type(36) elements: 4
+2024-12-10 10:41:39 type(36) elements: 4
+2024-12-10 10:41:49 type(36) elements: 4
+2024-12-10 10:41:59 type(36) elements: 4
+2024-12-10 10:42:09 type(36) elements: 4
+2024-12-10 10:42:19 type(36) elements: 4
+2024-12-10 10:42:29 type(36) elements: 4
+2024-12-10 10:42:39 type(36) elements: 4
+2024-12-10 10:42:49 type(36) elements: 4
+2024-12-10 11:01:42 Server stared 
+2024-12-10 11:01:42 Setup OK 
+2024-12-10 11:01:42 type(36) elements: 4
+2024-12-10 11:01:42 type(36) elements: 4
+2024-12-10 11:01:52 type(36) elements: 4
+2024-12-10 11:01:52 type(36) elements: 4
+2024-12-10 11:02:02 type(36) elements: 4
+2024-12-10 11:02:02 type(36) elements: 4
+2024-12-10 11:02:12 type(36) elements: 4
+2024-12-10 11:02:12 type(36) elements: 4
+2024-12-10 11:02:22 type(36) elements: 4
+2024-12-10 11:02:22 type(36) elements: 4
+2024-12-10 11:02:32 type(36) elements: 4
+2024-12-10 11:02:32 type(36) elements: 4
+2024-12-10 11:02:42 type(36) elements: 4
+2024-12-10 11:02:42 type(36) elements: 4
+2024-12-10 11:02:52 type(36) elements: 4
+2024-12-10 11:02:52 type(36) elements: 4
