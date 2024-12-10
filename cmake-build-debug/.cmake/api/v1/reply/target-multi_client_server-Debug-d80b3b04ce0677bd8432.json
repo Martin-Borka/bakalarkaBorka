@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib60870-C/examples/tls_server/tls_server"
+			"path" : "lib60870-C/examples/multi_client_server/multi_client_server"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"lib60870-C/examples/tls_server/CMakeLists.txt",
+			"lib60870-C/examples/multi_client_server/CMakeLists.txt",
 			"lib60870-C/src/CMakeLists.txt",
 			"CMakeLists.txt",
 			"lib60870-C/CMakeLists.txt"
@@ -104,39 +104,39 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/src"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/src"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/api"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/inc/api"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/config"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/config"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/internal"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/inc/internal"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/common/inc"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/common/inc"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/tls/mbedtls"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/tls_server/."
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/multi_client_server/."
 				}
 			],
 			"language" : "C",
@@ -161,7 +161,7 @@
 			"id" : "lib60870::@fc00ee6daa2fde5f51d1"
 		}
 	],
-	"id" : "tls_server::@f97657354fa1c83c0bc4",
+	"id" : "multi_client_server::@18fb55416c388182d54b",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -197,12 +197,12 @@
 		],
 		"language" : "C"
 	},
-	"name" : "tls_server",
-	"nameOnDisk" : "tls_server",
+	"name" : "multi_client_server",
+	"nameOnDisk" : "multi_client_server",
 	"paths" : 
 	{
-		"build" : "lib60870-C/examples/tls_server",
-		"source" : "lib60870-C/examples/tls_server"
+		"build" : "lib60870-C/examples/multi_client_server",
+		"source" : "lib60870-C/examples/multi_client_server"
 	},
 	"sourceGroups" : 
 	[
@@ -219,7 +219,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "lib60870-C/examples/tls_server/tls_server.c",
+			"path" : "lib60870-C/examples/multi_client_server/multi_client_server.c",
 			"sourceGroupIndex" : 0
 		}
 	],

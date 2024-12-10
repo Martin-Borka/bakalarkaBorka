@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1495,7 +1495,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug"
 		},
 		{
 			"name" : "borka_bp_IS_TOP_LEVEL",
@@ -1519,7 +1519,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka"
 		},
 		{
 			"name" : "lib60870-C_BINARY_DIR",
@@ -1531,7 +1531,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C"
 		},
 		{
 			"name" : "lib60870-C_IS_TOP_LEVEL",
@@ -1555,7 +1555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C"
+			"value" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C"
 		},
 		{
 			"name" : "lib60870_LIB_DEPENDS",

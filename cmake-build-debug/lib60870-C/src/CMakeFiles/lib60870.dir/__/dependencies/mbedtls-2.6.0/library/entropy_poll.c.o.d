@@ -1,8 +1,8 @@
 lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o: \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/library/entropy_poll.c \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/library/entropy_poll.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls/mbedtls_config.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/check_config.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/tls/mbedtls/mbedtls_config.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/check_config.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h \
@@ -20,9 +20,9 @@ lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ent
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/sha256.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/sha256.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -30,7 +30,7 @@ lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ent
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy_poll.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy_poll.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \

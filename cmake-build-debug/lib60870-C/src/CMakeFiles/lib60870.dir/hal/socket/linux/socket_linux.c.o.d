@@ -1,7 +1,7 @@
 lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.o: \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/socket/linux/socket_linux.c \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/socket/linux/socket_linux.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/hal_socket.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/hal_socket.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -86,8 +86,8 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /usr/include/netinet/tcp.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/hal_thread.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/lib_memory.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/hal_thread.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/lib_memory.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h

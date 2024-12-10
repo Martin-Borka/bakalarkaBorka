@@ -104,39 +104,39 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/src"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/src"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/api"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/inc/api"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/config"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/config"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/inc/internal"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/inc/internal"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/common/inc"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/common/inc"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/tls/mbedtls"
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include"
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs104_client/."
+					"path" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs104_client/."
 				}
 			],
 			"language" : "C",

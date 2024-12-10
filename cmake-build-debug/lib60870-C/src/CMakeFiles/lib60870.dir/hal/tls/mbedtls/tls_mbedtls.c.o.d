@@ -1,5 +1,5 @@
 lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls/tls_mbedtls.c \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/tls/mbedtls/tls_mbedtls.c \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -13,7 +13,7 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/tls_socket.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/tls_socket.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -21,11 +21,11 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/tls_config.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/tls_config.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/hal_socket.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/hal_thread.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/inc/lib_memory.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/hal_socket.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/hal_thread.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/inc/lib_memory.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -52,10 +52,10 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/common/inc/linked_list.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/platform.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/src/hal/tls/mbedtls/mbedtls_config.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/check_config.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/common/inc/linked_list.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/platform.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/src/hal/tls/mbedtls/mbedtls_config.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/check_config.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -64,7 +64,7 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/platform_time.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/platform_time.h \
  /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -76,25 +76,25 @@ lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/sha256.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ctr_drbg.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/aes.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/certs.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/asn1.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/bignum.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/pk.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/md.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/rsa.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ecp.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl_ciphersuites.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/cipher.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509_crt.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509_crl.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/net_sockets.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/error.h \
- /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/debug.h
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/entropy.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/sha256.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ctr_drbg.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/aes.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/certs.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/asn1.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/bignum.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/pk.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/md.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/rsa.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ecp.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl_ciphersuites.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/cipher.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509_crt.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/x509_crl.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/net_sockets.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/ssl.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/error.h \
+ /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/dependencies/mbedtls-2.6.0/include/mbedtls/debug.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib60870-C/tests/CMakeFiles/tests.dir/depend.make
@@ -72,30 +72,30 @@ include lib60870-C/tests/CMakeFiles/tests.dir/flags.make
 lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o: lib60870-C/tests/CMakeFiles/tests.dir/flags.make
 lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o: ../lib60870-C/tests/all_tests.c
 lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o: lib60870-C/tests/CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o -MF CMakeFiles/tests.dir/all_tests.c.o.d -o CMakeFiles/tests.dir/all_tests.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/all_tests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o"
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o -MF CMakeFiles/tests.dir/all_tests.c.o.d -o CMakeFiles/tests.dir/all_tests.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/all_tests.c
 
 lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tests.dir/all_tests.c.i"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/all_tests.c > CMakeFiles/tests.dir/all_tests.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/all_tests.c > CMakeFiles/tests.dir/all_tests.c.i
 
 lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tests.dir/all_tests.c.s"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/all_tests.c -o CMakeFiles/tests.dir/all_tests.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/all_tests.c -o CMakeFiles/tests.dir/all_tests.c.s
 
 lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o: lib60870-C/tests/CMakeFiles/tests.dir/flags.make
 lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o: ../lib60870-C/tests/unity/unity.c
 lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o: lib60870-C/tests/CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o -MF CMakeFiles/tests.dir/unity/unity.c.o.d -o CMakeFiles/tests.dir/unity/unity.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/unity/unity.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o"
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o -MF CMakeFiles/tests.dir/unity/unity.c.o.d -o CMakeFiles/tests.dir/unity/unity.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/unity/unity.c
 
 lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tests.dir/unity/unity.c.i"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/unity/unity.c > CMakeFiles/tests.dir/unity/unity.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/unity/unity.c > CMakeFiles/tests.dir/unity/unity.c.i
 
 lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tests.dir/unity/unity.c.s"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests/unity/unity.c -o CMakeFiles/tests.dir/unity/unity.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests/unity/unity.c -o CMakeFiles/tests.dir/unity/unity.c.s
 
 # Object files for target tests
 tests_OBJECTS = \
@@ -110,18 +110,18 @@ lib60870-C/tests/tests: lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o
 lib60870-C/tests/tests: lib60870-C/tests/CMakeFiles/tests.dir/build.make
 lib60870-C/tests/tests: lib60870-C/src/liblib60870.a
 lib60870-C/tests/tests: lib60870-C/tests/CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable tests"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable tests"
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib60870-C/tests/CMakeFiles/tests.dir/build: lib60870-C/tests/tests
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/build
 
 lib60870-C/tests/CMakeFiles/tests.dir/clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/clean
 
 lib60870-C/tests/CMakeFiles/tests.dir/depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/tests /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/tests /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/depend
 

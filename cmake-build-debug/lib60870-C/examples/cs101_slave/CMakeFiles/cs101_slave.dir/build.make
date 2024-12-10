@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/depend.make
@@ -72,16 +72,16 @@ include lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/flags.make
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o: lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/flags.make
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o: ../lib60870-C/examples/cs101_slave/slave_example.c
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o: lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o -MF CMakeFiles/cs101_slave.dir/slave_example.c.o.d -o CMakeFiles/cs101_slave.dir/slave_example.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs101_slave/slave_example.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o"
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.o -MF CMakeFiles/cs101_slave.dir/slave_example.c.o.d -o CMakeFiles/cs101_slave.dir/slave_example.c.o -c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs101_slave/slave_example.c
 
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cs101_slave.dir/slave_example.c.i"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs101_slave/slave_example.c > CMakeFiles/cs101_slave.dir/slave_example.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs101_slave/slave_example.c > CMakeFiles/cs101_slave.dir/slave_example.c.i
 
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/slave_example.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cs101_slave.dir/slave_example.c.s"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs101_slave/slave_example.c -o CMakeFiles/cs101_slave.dir/slave_example.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs101_slave/slave_example.c -o CMakeFiles/cs101_slave.dir/slave_example.c.s
 
 # Object files for target cs101_slave
 cs101_slave_OBJECTS = \
@@ -94,18 +94,18 @@ lib60870-C/examples/cs101_slave/cs101_slave: lib60870-C/examples/cs101_slave/CMa
 lib60870-C/examples/cs101_slave/cs101_slave: lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build.make
 lib60870-C/examples/cs101_slave/cs101_slave: lib60870-C/src/liblib60870.a
 lib60870-C/examples/cs101_slave/cs101_slave: lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable cs101_slave"
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cs101_slave.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable cs101_slave"
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cs101_slave.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build: lib60870-C/examples/cs101_slave/cs101_slave
 .PHONY : lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build
 
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave && $(CMAKE_COMMAND) -P CMakeFiles/cs101_slave.dir/cmake_clean.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave && $(CMAKE_COMMAND) -P CMakeFiles/cs101_slave.dir/cmake_clean.cmake
 .PHONY : lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/clean
 
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs101_slave /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs101_slave /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/depend
 

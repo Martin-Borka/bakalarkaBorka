@@ -29,6 +29,7 @@ int MONITOR_TEMP_FREQ;
 double INPUT_POWER_FACTOR = 1;
 double TRANSFORMER_POWER_FACTOR = 5;
 int dayInMinutes=0;
+char str_IP[256];
 // zkaladni hodnoty gener
 double variables[4][4]; // U voltige I corrent frequenc
 
@@ -53,6 +54,7 @@ double monitorOUT[4]; //
 double MONITOR_OUT_objects[4][4];
 double MONITOR_TEMPERATURE_object[7];
 double MONITOR_FREQ_objects[3];
+int cot=0;
 
 int onehundredfourioa[16][2] = {
         {4000, 0},
@@ -87,12 +89,48 @@ void sleep(int milliseconds) {
 void onehundredfour(){
     onehundredfourioa[15][1];
 }
+void
+sigint_handler(int signalId)
+{
+    running = false;
+}
 
+//získávání datu a času
+void
+printCP56Time2a(CP56Time2a time)
+{
+    printf("%02i:%02i:%02i %02i/%02i/%04i", CP56Time2a_getHour(time),
+           CP56Time2a_getMinute(time),
+           CP56Time2a_getSecond(time),
+           CP56Time2a_getDayOfMonth(time),
+           CP56Time2a_getMonth(time),
+           CP56Time2a_getYear(time) + 2000);
+}
+
+
+static bool
+clockSyncHandler (void* parameter, IMasterConnection connection, CS101_ASDU asdu, CP56Time2a newTime)
+{
+    printf("Process time sync command with time "); printCP56Time2a(newTime); printf("\n");
+
+    uint64_t newSystemTimeInMs = CP56Time2a_toMsTimestamp(newTime);
+
+    /* Set time for ACT_CON message */
+    CP56Time2a_setFromMsTimestamp(newTime, Hal_getTimeInMs());
+
+    /* update system time here */
+
+    return true;
+}
+
+
+
+
+//-------
 int readInput() {
 
    FILE *fp;
 
-    printf("hi \n");
 
     fp = fopen("conf/MainConfig_server2404.txt", "r");
     if (fp == NULL) {
@@ -123,6 +161,8 @@ int readInput() {
                         i++;
                     }
                 }
+                snprintf(str_IP, sizeof(str_IP), "%d.%d.%d.%d",
+                     IPADDRESS[0], IPADDRESS[1], IPADDRESS[2], IPADDRESS[3]);
                 printf("IP.\n");
             }
 
@@ -301,88 +341,47 @@ int nacteniscenare()
 }
 
 //--------------------------------------------------------------------------------------------------------------
-
-/*double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
+static bool
+interrogationHandler(void* parameter, IMasterConnection connection, CS101_ASDU asdu, uint8_t qoi)
 {
-    randomNumber = rand() % 2; //3;
-    randomNumber +=1;
-    printf("random = %d\n", randomNumber);
-    printf("aktual = %lf\n", aktual);
-    printf("min = %lf\n", min);
-    printf("max = %lf\n", max);
-    printf("step = %lf\n", step);
-    printf("scenar = %d\n", scenare);
+    printf("Received interrogation for group %i\n", qoi);
+    return true;
+}
 
-    if (step <= 0) {
-        step=0.001;
-    }
+void LogTXwT(int ioa,float value,CP56Time2a timestamp ){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+    fp = fopen ("log/log.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d IOA: %i value: %f with timestamp: %04i-%02i-%02i %02i:%02i:%02i.%03i \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min,
+            tm.tm_sec,ioa,value,CP56Time2a_getYear(timestamp) + 2000 ,CP56Time2a_getMonth(timestamp),CP56Time2a_getDayOfMonth(timestamp),
+            CP56Time2a_getHour(timestamp), CP56Time2a_getMinute(timestamp), CP56Time2a_getSecond(timestamp), CP56Time2a_getMillisecond(timestamp));
+    fclose(fp);
+}
 
-    int n = (int)((max - min) / step) + 1;
-    int size = n;
-    if (n <= 0) {
-        printf("Chybny rozsah nebo krok!\n");
-        return aktual;
-    }
-    // Alokace paměti pro pole
-    double *array = (double *)malloc(n * sizeof(double));
-    if (array == NULL) {
-        printf("Chyba při alokaci paměti!\n");
-        exit(1);
-    }
+CS101_ASDU asdu2Send;
+CS101_ASDU CreateMONITOR_IN_ASDU(CS101_AppLayerParameters alParams, int cot, CP56Time2a timestamp){
 
-    // Generování hodnot
-    double current = min;
-    for (int i = 0; i < n; i++)
-    {
-        array[i] = min + i * step;
-    }
-    //generovani
-    for (int i = 0; i < size; i++)
-    {
-        if ((aktual == min) && (scenare != 0))
-        {
-            aktual = array[i + 1];
-            i = size;
-        }
-        else if ((aktual == max) && (scenare == 2))
-        {
-            aktual = array[i - 1];
-            i = size;
-        }
-        else if ((aktual == array[i]) && (scenare == 0))
-        {
-            aktual = array[i - 10];
-            i = size;
-        }
-        else if ((aktual == array[i]) && (scenare == 2))
-        {
-            aktual = array[i + 10];
-            i = size;
-        }
-        else if (aktual == array[i])
-        {
-            switch (randomNumber)
-            {
-            case 0:
-                break;
-            case 1:
-                aktual = array[i - 1];
-                break;
-            case 2:
-                aktual = array[i + 1];
-                break;
-            default:
-                break;
+    asdu2Send = CS101_ASDU_create(alParams, false, cot, ORIGINATOR_ADDRESS, COMMON_ADDRESS, false, false);
+
+
+        for (int j = 0; j < 4; ++j) {
+            InformationObject io = (InformationObject) MeasuredValueShortWithCP56Time2a_create(NULL,NULL, monitorIN[j], IEC60870_QUALITY_GOOD,timestamp);
+            CS101_ASDU_addInformationObject(asdu2Send, io);
+            if (DATA_LOGS){
+                LogTXwT(InformationObject_getObjectAddress((InformationObject) io),MeasuredValueShort_getValue((MeasuredValueShort) io), timestamp);
             }
-            i = size;
+            //tmpSharedValue=MeasuredValueShort_getValue((MeasuredValueShort) io);
+            printf("    IOA: %i with value: %f \n",1000,MeasuredValueShort_getValue((MeasuredValueShort)io));
+
+            InformationObject_destroy(io);
         }
-    }
 
-    printf("aktual = %lf\n-----\n", aktual);
-    free(array);
-    return (aktual);
-}*/
 
+    return asdu2Send;
+
+}
+//---------------------------------------------------------------------------------------
 double nahodnehodnoty(double aktual, double min, double max, double step, int scenare)
 {
     randomNumber = rand() % 2; //3;
@@ -520,6 +519,18 @@ void printonehundredfour(){
 }
 
 // Log
+//data logs
+
+void LogTX(int type,int elements){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    FILE * fp;
+
+    fp = fopen ("log/log.txt", "a");
+    fprintf(fp,"%d-%02d-%02d %02d:%02d:%02d type(%i) elements: %i\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec,type,elements);
+    fclose(fp);
+}
+
 // event logs
 void LogSTART()
 {
@@ -605,6 +616,49 @@ void LogshortCircuit()
 // start
 int main()
 {
+
+    /* Add Ctrl-C handler */
+    signal(SIGINT, sigint_handler);
+
+    /* create a new slave/server instance with default connection parameters and
+     * default message queue size */
+    CS104_Slave slave = CS104_Slave_create(100, 100);
+
+    //CS104_Slave_setLocalAddress(slave, "0.0.0.0"); // "192.168.126.138" "0.0.0.0" "192.168.100.111" "192.168.100.101"
+    CS104_Slave_setLocalAddress(slave, str_IP);
+
+    /* Set mode to a single redundancy group
+     * NOTE: library has to be compiled with CONFIG_CS104_SUPPORT_SERVER_MODE_SINGLE_REDUNDANCY_GROUP enabled (=1)
+     */
+    CS104_Slave_setServerMode(slave, CS104_MODE_SINGLE_REDUNDANCY_GROUP);
+
+    /* get the connection parameters - we need them to create correct ASDUs */
+    CS101_AppLayerParameters alParams = CS104_Slave_getAppLayerParameters(slave);
+
+    /* set the callback handler for the clock synchronization command */
+    CS104_Slave_setClockSyncHandler(slave, clockSyncHandler, NULL);
+
+    /* set the callback handler for the interrogation command */
+    CS104_Slave_setInterrogationHandler(slave, interrogationHandler, NULL);
+
+    /* set handler for other message types */
+    //CS104_Slave_setASDUHandler(slave, asduHandler, NULL);
+
+    /* set comunication port */
+    CS104_Slave_setLocalPort(slave,PORT);
+    //CS104_Slave_createSecure(1,255,TLSConfiguration_create());
+
+    /* set handler to handle connection requests (optional)
+    CS104_Slave_setConnectionRequestHandler(slave, connectionRequestHandler, NULL);*/
+
+    /* set handler to track connection events (optional)
+    CS104_Slave_setConnectionEventHandler(slave, connectionEventHandler, NULL);*/
+
+    /* uncomment to log messages */
+    //CS104_Slave_setRawMessageHandler(slave, rawMessageHandler, NULL);
+
+    CS104_Slave_start(slave);
+
 
     bool prestart = true;
     // pr
@@ -968,19 +1022,31 @@ int main()
         // změna dat, UIQ
 
         //in response time
-        if(time_monitorTimer>=PER_RESPONSE_time || alarm>=ALARM_PERIOD_time || sendRecovery==true){
-
+        if(time_monitorTimer>=PER_RESPONSE_time || alarm>=ALARM_PERIOD_time || sendRecovery==true) {
             if (alarm>=ALARM_PERIOD_time || sendRecovery==true){
                 alarm=0;
                 sendRecovery=false;
                 printf("Alarm\n");
+                cot=3;
+            }else{
+                cot=1;
             }
+
             //single values
 
             //time_monitorTimer=0;
 
+            //in values
 
+            printf("SENDED ASDU type: 36 elements: %i \n", 4);
+            if (DATA_LOGS){
+                LogTX(36,4);
             }
+            CS101_ASDU newAsdu = CreateMONITOR_IN_ASDU(alParams, cot,CP56Time2a_createFromMsTimestamp(NULL, Hal_getTimeInMs()));
+            CS104_Slave_enqueueASDU(slave, newAsdu);
+            CS101_ASDU_destroy(newAsdu);
+            time_monitorTimer=0;
+        }
             //dočasne
             //scenar=6;
         if (scenar == 6)

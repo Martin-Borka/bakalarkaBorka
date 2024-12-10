@@ -309,98 +309,98 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "borka_bp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-borka_bp-Debug-f59ecb27f8cc84fcd972.json",
+					"jsonFile" : "target-borka_bp-Debug-675d4cf89dddb7af6e33.json",
 					"name" : "borka_bp",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "cs101_master_balanced::@323d8fdb8d6e7a2dfae1",
-					"jsonFile" : "target-cs101_master_balanced-Debug-e2246854bac397c707ae.json",
+					"jsonFile" : "target-cs101_master_balanced-Debug-c08cfe2918568c8ce5e9.json",
 					"name" : "cs101_master_balanced",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "cs101_master_unbalanced::@b9b0e9b250b1a35d6bfc",
-					"jsonFile" : "target-cs101_master_unbalanced-Debug-a53ebef54eb86d527884.json",
+					"jsonFile" : "target-cs101_master_unbalanced-Debug-7e0bf80ee1d669f6204f.json",
 					"name" : "cs101_master_unbalanced",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "cs101_slave::@74eabdddfccdabc5e893",
-					"jsonFile" : "target-cs101_slave-Debug-29c65dd5d96a50257884.json",
+					"jsonFile" : "target-cs101_slave-Debug-e2fd2deb60ed8bfcbb28.json",
 					"name" : "cs101_slave",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 9,
 					"id" : "cs104_redundancy_server::@1813406fde1807fe9c9a",
-					"jsonFile" : "target-cs104_redundancy_server-Debug-1130824fd8361d55994f.json",
+					"jsonFile" : "target-cs104_redundancy_server-Debug-2292a0dadbe6d706564d.json",
 					"name" : "cs104_redundancy_server",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 7,
 					"id" : "cs104_server::@87dde47e735e29755735",
-					"jsonFile" : "target-cs104_server-Debug-bbd2246b8b6ff218e338.json",
+					"jsonFile" : "target-cs104_server-Debug-6ea5b3fa40cef35ff554.json",
 					"name" : "cs104_server",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 8,
 					"id" : "cs104_server_no_threads::@97441ab42edb83813930",
-					"jsonFile" : "target-cs104_server_no_threads-Debug-c1a97a57e373b5609c98.json",
+					"jsonFile" : "target-cs104_server_no_threads-Debug-5246b108d1dbb9f350cb.json",
 					"name" : "cs104_server_no_threads",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 14,
 					"id" : "lib60870::@fc00ee6daa2fde5f51d1",
-					"jsonFile" : "target-lib60870-Debug-70ad3817c1f59eb42578.json",
+					"jsonFile" : "target-lib60870-Debug-ac43cc3dec47d081ea30.json",
 					"name" : "lib60870",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 14,
 					"id" : "lib60870-shared::@fc00ee6daa2fde5f51d1",
-					"jsonFile" : "target-lib60870-shared-Debug-4d28f2b8e1aaa67b410a.json",
+					"jsonFile" : "target-lib60870-shared-Debug-3e1f1731ca4fe8117476.json",
 					"name" : "lib60870-shared",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 10,
 					"id" : "multi_client_server::@18fb55416c388182d54b",
-					"jsonFile" : "target-multi_client_server-Debug-58797f2824263f134f19.json",
+					"jsonFile" : "target-multi_client_server-Debug-d80b3b04ce0677bd8432.json",
 					"name" : "multi_client_server",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "simple_client::@81e367b98b67e4a5341a",
-					"jsonFile" : "target-simple_client-Debug-c070f097b628cdf27139.json",
+					"jsonFile" : "target-simple_client-Debug-10b337c0fea5d7358038.json",
 					"name" : "simple_client",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 13,
 					"id" : "tests::@7673028569a7862ce122",
-					"jsonFile" : "target-tests-Debug-9b82f7af242a87f5cad0.json",
+					"jsonFile" : "target-tests-Debug-ad8a0c447b16e7389c21.json",
 					"name" : "tests",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 11,
 					"id" : "tls_client::@41c00367a1eaef6482bd",
-					"jsonFile" : "target-tls_client-Debug-beb94f036c37f43e2dad.json",
+					"jsonFile" : "target-tls_client-Debug-42ab0bc7a9c32c4cbafe.json",
 					"name" : "tls_client",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 12,
 					"id" : "tls_server::@f97657354fa1c83c0bc4",
-					"jsonFile" : "target-tls_server-Debug-59d2364db81695f39202.json",
+					"jsonFile" : "target-tls_server-Debug-dda27b9d58225c077837.json",
 					"name" : "tls_server",
 					"projectIndex" : 1
 				}
@@ -410,8 +410,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug",
-		"source" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c"
+		"build" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug",
+		"source" : "/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka"
 	},
 	"version" : 
 	{

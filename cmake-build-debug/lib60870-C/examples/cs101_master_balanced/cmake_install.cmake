@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/lib60870-C/examples/cs101_master_balanced
+# Install script for directory: /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/lib60870-C/examples/cs101_master_balanced
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

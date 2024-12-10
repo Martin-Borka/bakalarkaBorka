@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CPackSourceConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/tls_server//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/tls_server//CMakeFiles/progress.marks
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/clean
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule
 .PHONY : lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ tls_server: lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule
 
 # fast build rule for target.
 tls_server/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build
 .PHONY : tls_server/fast
 
 tls_server.o: tls_server.c.o
@@ -200,7 +200,7 @@ tls_server.o: tls_server.c.o
 
 # target to build an object file
 tls_server.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.o
 .PHONY : tls_server.c.o
 
 tls_server.i: tls_server.c.i
@@ -208,7 +208,7 @@ tls_server.i: tls_server.c.i
 
 # target to preprocess a source file
 tls_server.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.i
 .PHONY : tls_server.c.i
 
 tls_server.s: tls_server.c.s
@@ -216,7 +216,7 @@ tls_server.s: tls_server.c.s
 
 # target to generate assembly for a file
 tls_server.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/tls_server.c.s
 .PHONY : tls_server.c.s
 
 # Help Target
@@ -248,6 +248,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

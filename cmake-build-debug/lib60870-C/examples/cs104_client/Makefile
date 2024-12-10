@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CPackSourceConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/examples/cs104_client//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/examples/cs104_client//CMakeFiles/progress.marks
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/clean
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule
 .PHONY : lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ simple_client: lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rul
 
 # fast build rule for target.
 simple_client/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build
 .PHONY : simple_client/fast
 
 simple_client.o: simple_client.c.o
@@ -200,7 +200,7 @@ simple_client.o: simple_client.c.o
 
 # target to build an object file
 simple_client.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.o
 .PHONY : simple_client.c.o
 
 simple_client.i: simple_client.c.i
@@ -208,7 +208,7 @@ simple_client.i: simple_client.c.i
 
 # target to preprocess a source file
 simple_client.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.i
 .PHONY : simple_client.c.i
 
 simple_client.s: simple_client.c.s
@@ -216,7 +216,7 @@ simple_client.s: simple_client.c.s
 
 # target to generate assembly for a file
 simple_client.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/simple_client.c.s
 .PHONY : simple_client.c.s
 
 # Help Target
@@ -248,6 +248,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

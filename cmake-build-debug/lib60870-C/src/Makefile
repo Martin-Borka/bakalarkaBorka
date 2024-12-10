@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CPackSourceConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/src//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/src//CMakeFiles/progress.marks
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/clean
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule
 .PHONY : lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ lib60870-shared: lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule
 
 # fast build rule for target.
 lib60870-shared/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/build
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/build
 .PHONY : lib60870-shared/fast
 
 # Convenience name for target.
 lib60870-C/src/CMakeFiles/lib60870.dir/rule:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870.dir/rule
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870.dir/rule
 .PHONY : lib60870-C/src/CMakeFiles/lib60870.dir/rule
 
 # Convenience name for target.
@@ -206,7 +206,7 @@ lib60870: lib60870-C/src/CMakeFiles/lib60870.dir/rule
 
 # fast build rule for target.
 lib60870/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/build
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/build
 .PHONY : lib60870/fast
 
 __/dependencies/mbedtls-2.6.0/library/aes.o: __/dependencies/mbedtls-2.6.0/library/aes.c.o
@@ -214,8 +214,8 @@ __/dependencies/mbedtls-2.6.0/library/aes.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/aes.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aes.c.o
 
 __/dependencies/mbedtls-2.6.0/library/aes.i: __/dependencies/mbedtls-2.6.0/library/aes.c.i
@@ -223,8 +223,8 @@ __/dependencies/mbedtls-2.6.0/library/aes.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/aes.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aes.c.i
 
 __/dependencies/mbedtls-2.6.0/library/aes.s: __/dependencies/mbedtls-2.6.0/library/aes.c.s
@@ -232,8 +232,8 @@ __/dependencies/mbedtls-2.6.0/library/aes.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/aes.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aes.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aes.c.s
 
 __/dependencies/mbedtls-2.6.0/library/aesni.o: __/dependencies/mbedtls-2.6.0/library/aesni.c.o
@@ -241,8 +241,8 @@ __/dependencies/mbedtls-2.6.0/library/aesni.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/aesni.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aesni.c.o
 
 __/dependencies/mbedtls-2.6.0/library/aesni.i: __/dependencies/mbedtls-2.6.0/library/aesni.c.i
@@ -250,8 +250,8 @@ __/dependencies/mbedtls-2.6.0/library/aesni.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/aesni.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aesni.c.i
 
 __/dependencies/mbedtls-2.6.0/library/aesni.s: __/dependencies/mbedtls-2.6.0/library/aesni.c.s
@@ -259,8 +259,8 @@ __/dependencies/mbedtls-2.6.0/library/aesni.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/aesni.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/aesni.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/aesni.c.s
 
 __/dependencies/mbedtls-2.6.0/library/arc4.o: __/dependencies/mbedtls-2.6.0/library/arc4.c.o
@@ -268,8 +268,8 @@ __/dependencies/mbedtls-2.6.0/library/arc4.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/arc4.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/arc4.c.o
 
 __/dependencies/mbedtls-2.6.0/library/arc4.i: __/dependencies/mbedtls-2.6.0/library/arc4.c.i
@@ -277,8 +277,8 @@ __/dependencies/mbedtls-2.6.0/library/arc4.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/arc4.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/arc4.c.i
 
 __/dependencies/mbedtls-2.6.0/library/arc4.s: __/dependencies/mbedtls-2.6.0/library/arc4.c.s
@@ -286,8 +286,8 @@ __/dependencies/mbedtls-2.6.0/library/arc4.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/arc4.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/arc4.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/arc4.c.s
 
 __/dependencies/mbedtls-2.6.0/library/asn1parse.o: __/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
@@ -295,8 +295,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1parse.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/asn1parse.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1parse.c.o
 
 __/dependencies/mbedtls-2.6.0/library/asn1parse.i: __/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
@@ -304,8 +304,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1parse.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/asn1parse.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1parse.c.i
 
 __/dependencies/mbedtls-2.6.0/library/asn1parse.s: __/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
@@ -313,8 +313,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1parse.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/asn1parse.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1parse.c.s
 
 __/dependencies/mbedtls-2.6.0/library/asn1write.o: __/dependencies/mbedtls-2.6.0/library/asn1write.c.o
@@ -322,8 +322,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1write.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/asn1write.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1write.c.o
 
 __/dependencies/mbedtls-2.6.0/library/asn1write.i: __/dependencies/mbedtls-2.6.0/library/asn1write.c.i
@@ -331,8 +331,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1write.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/asn1write.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1write.c.i
 
 __/dependencies/mbedtls-2.6.0/library/asn1write.s: __/dependencies/mbedtls-2.6.0/library/asn1write.c.s
@@ -340,8 +340,8 @@ __/dependencies/mbedtls-2.6.0/library/asn1write.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/asn1write.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/asn1write.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/asn1write.c.s
 
 __/dependencies/mbedtls-2.6.0/library/base64.o: __/dependencies/mbedtls-2.6.0/library/base64.c.o
@@ -349,8 +349,8 @@ __/dependencies/mbedtls-2.6.0/library/base64.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/base64.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/base64.c.o
 
 __/dependencies/mbedtls-2.6.0/library/base64.i: __/dependencies/mbedtls-2.6.0/library/base64.c.i
@@ -358,8 +358,8 @@ __/dependencies/mbedtls-2.6.0/library/base64.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/base64.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/base64.c.i
 
 __/dependencies/mbedtls-2.6.0/library/base64.s: __/dependencies/mbedtls-2.6.0/library/base64.c.s
@@ -367,8 +367,8 @@ __/dependencies/mbedtls-2.6.0/library/base64.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/base64.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/base64.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/base64.c.s
 
 __/dependencies/mbedtls-2.6.0/library/bignum.o: __/dependencies/mbedtls-2.6.0/library/bignum.c.o
@@ -376,8 +376,8 @@ __/dependencies/mbedtls-2.6.0/library/bignum.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/bignum.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/bignum.c.o
 
 __/dependencies/mbedtls-2.6.0/library/bignum.i: __/dependencies/mbedtls-2.6.0/library/bignum.c.i
@@ -385,8 +385,8 @@ __/dependencies/mbedtls-2.6.0/library/bignum.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/bignum.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/bignum.c.i
 
 __/dependencies/mbedtls-2.6.0/library/bignum.s: __/dependencies/mbedtls-2.6.0/library/bignum.c.s
@@ -394,8 +394,8 @@ __/dependencies/mbedtls-2.6.0/library/bignum.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/bignum.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/bignum.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/bignum.c.s
 
 __/dependencies/mbedtls-2.6.0/library/blowfish.o: __/dependencies/mbedtls-2.6.0/library/blowfish.c.o
@@ -403,8 +403,8 @@ __/dependencies/mbedtls-2.6.0/library/blowfish.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/blowfish.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/blowfish.c.o
 
 __/dependencies/mbedtls-2.6.0/library/blowfish.i: __/dependencies/mbedtls-2.6.0/library/blowfish.c.i
@@ -412,8 +412,8 @@ __/dependencies/mbedtls-2.6.0/library/blowfish.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/blowfish.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/blowfish.c.i
 
 __/dependencies/mbedtls-2.6.0/library/blowfish.s: __/dependencies/mbedtls-2.6.0/library/blowfish.c.s
@@ -421,8 +421,8 @@ __/dependencies/mbedtls-2.6.0/library/blowfish.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/blowfish.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/blowfish.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/blowfish.c.s
 
 __/dependencies/mbedtls-2.6.0/library/camellia.o: __/dependencies/mbedtls-2.6.0/library/camellia.c.o
@@ -430,8 +430,8 @@ __/dependencies/mbedtls-2.6.0/library/camellia.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/camellia.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/camellia.c.o
 
 __/dependencies/mbedtls-2.6.0/library/camellia.i: __/dependencies/mbedtls-2.6.0/library/camellia.c.i
@@ -439,8 +439,8 @@ __/dependencies/mbedtls-2.6.0/library/camellia.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/camellia.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/camellia.c.i
 
 __/dependencies/mbedtls-2.6.0/library/camellia.s: __/dependencies/mbedtls-2.6.0/library/camellia.c.s
@@ -448,8 +448,8 @@ __/dependencies/mbedtls-2.6.0/library/camellia.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/camellia.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/camellia.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/camellia.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ccm.o: __/dependencies/mbedtls-2.6.0/library/ccm.c.o
@@ -457,8 +457,8 @@ __/dependencies/mbedtls-2.6.0/library/ccm.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ccm.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ccm.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ccm.i: __/dependencies/mbedtls-2.6.0/library/ccm.c.i
@@ -466,8 +466,8 @@ __/dependencies/mbedtls-2.6.0/library/ccm.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ccm.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ccm.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ccm.s: __/dependencies/mbedtls-2.6.0/library/ccm.c.s
@@ -475,8 +475,8 @@ __/dependencies/mbedtls-2.6.0/library/ccm.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ccm.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ccm.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ccm.c.s
 
 __/dependencies/mbedtls-2.6.0/library/certs.o: __/dependencies/mbedtls-2.6.0/library/certs.c.o
@@ -484,8 +484,8 @@ __/dependencies/mbedtls-2.6.0/library/certs.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/certs.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/certs.c.o
 
 __/dependencies/mbedtls-2.6.0/library/certs.i: __/dependencies/mbedtls-2.6.0/library/certs.c.i
@@ -493,8 +493,8 @@ __/dependencies/mbedtls-2.6.0/library/certs.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/certs.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/certs.c.i
 
 __/dependencies/mbedtls-2.6.0/library/certs.s: __/dependencies/mbedtls-2.6.0/library/certs.c.s
@@ -502,8 +502,8 @@ __/dependencies/mbedtls-2.6.0/library/certs.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/certs.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/certs.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/certs.c.s
 
 __/dependencies/mbedtls-2.6.0/library/cipher.o: __/dependencies/mbedtls-2.6.0/library/cipher.c.o
@@ -511,8 +511,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/cipher.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher.c.o
 
 __/dependencies/mbedtls-2.6.0/library/cipher.i: __/dependencies/mbedtls-2.6.0/library/cipher.c.i
@@ -520,8 +520,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/cipher.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher.c.i
 
 __/dependencies/mbedtls-2.6.0/library/cipher.s: __/dependencies/mbedtls-2.6.0/library/cipher.c.s
@@ -529,8 +529,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/cipher.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher.c.s
 
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.o: __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
@@ -538,8 +538,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher_wrap.o: __/dependencies/mbedtls-2.6
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.o
 
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.i: __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
@@ -547,8 +547,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher_wrap.i: __/dependencies/mbedtls-2.6
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.i
 
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.s: __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
@@ -556,8 +556,8 @@ __/dependencies/mbedtls-2.6.0/library/cipher_wrap.s: __/dependencies/mbedtls-2.6
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cipher_wrap.c.s
 
 __/dependencies/mbedtls-2.6.0/library/cmac.o: __/dependencies/mbedtls-2.6.0/library/cmac.c.o
@@ -565,8 +565,8 @@ __/dependencies/mbedtls-2.6.0/library/cmac.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/cmac.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cmac.c.o
 
 __/dependencies/mbedtls-2.6.0/library/cmac.i: __/dependencies/mbedtls-2.6.0/library/cmac.c.i
@@ -574,8 +574,8 @@ __/dependencies/mbedtls-2.6.0/library/cmac.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/cmac.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cmac.c.i
 
 __/dependencies/mbedtls-2.6.0/library/cmac.s: __/dependencies/mbedtls-2.6.0/library/cmac.c.s
@@ -583,8 +583,8 @@ __/dependencies/mbedtls-2.6.0/library/cmac.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/cmac.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/cmac.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/cmac.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.o: __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
@@ -592,8 +592,8 @@ __/dependencies/mbedtls-2.6.0/library/ctr_drbg.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.i: __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
@@ -601,8 +601,8 @@ __/dependencies/mbedtls-2.6.0/library/ctr_drbg.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.s: __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
@@ -610,8 +610,8 @@ __/dependencies/mbedtls-2.6.0/library/ctr_drbg.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ctr_drbg.c.s
 
 __/dependencies/mbedtls-2.6.0/library/debug.o: __/dependencies/mbedtls-2.6.0/library/debug.c.o
@@ -619,8 +619,8 @@ __/dependencies/mbedtls-2.6.0/library/debug.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/debug.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/debug.c.o
 
 __/dependencies/mbedtls-2.6.0/library/debug.i: __/dependencies/mbedtls-2.6.0/library/debug.c.i
@@ -628,8 +628,8 @@ __/dependencies/mbedtls-2.6.0/library/debug.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/debug.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/debug.c.i
 
 __/dependencies/mbedtls-2.6.0/library/debug.s: __/dependencies/mbedtls-2.6.0/library/debug.c.s
@@ -637,8 +637,8 @@ __/dependencies/mbedtls-2.6.0/library/debug.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/debug.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/debug.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/debug.c.s
 
 __/dependencies/mbedtls-2.6.0/library/des.o: __/dependencies/mbedtls-2.6.0/library/des.c.o
@@ -646,8 +646,8 @@ __/dependencies/mbedtls-2.6.0/library/des.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/des.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/des.c.o
 
 __/dependencies/mbedtls-2.6.0/library/des.i: __/dependencies/mbedtls-2.6.0/library/des.c.i
@@ -655,8 +655,8 @@ __/dependencies/mbedtls-2.6.0/library/des.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/des.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/des.c.i
 
 __/dependencies/mbedtls-2.6.0/library/des.s: __/dependencies/mbedtls-2.6.0/library/des.c.s
@@ -664,8 +664,8 @@ __/dependencies/mbedtls-2.6.0/library/des.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/des.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/des.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/des.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/des.c.s
 
 __/dependencies/mbedtls-2.6.0/library/dhm.o: __/dependencies/mbedtls-2.6.0/library/dhm.c.o
@@ -673,8 +673,8 @@ __/dependencies/mbedtls-2.6.0/library/dhm.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/dhm.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/dhm.c.o
 
 __/dependencies/mbedtls-2.6.0/library/dhm.i: __/dependencies/mbedtls-2.6.0/library/dhm.c.i
@@ -682,8 +682,8 @@ __/dependencies/mbedtls-2.6.0/library/dhm.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/dhm.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/dhm.c.i
 
 __/dependencies/mbedtls-2.6.0/library/dhm.s: __/dependencies/mbedtls-2.6.0/library/dhm.c.s
@@ -691,8 +691,8 @@ __/dependencies/mbedtls-2.6.0/library/dhm.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/dhm.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/dhm.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/dhm.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ecdh.o: __/dependencies/mbedtls-2.6.0/library/ecdh.c.o
@@ -700,8 +700,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdh.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ecdh.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdh.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ecdh.i: __/dependencies/mbedtls-2.6.0/library/ecdh.c.i
@@ -709,8 +709,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdh.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ecdh.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdh.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ecdh.s: __/dependencies/mbedtls-2.6.0/library/ecdh.c.s
@@ -718,8 +718,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdh.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ecdh.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdh.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdh.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ecdsa.o: __/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
@@ -727,8 +727,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdsa.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ecdsa.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdsa.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ecdsa.i: __/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
@@ -736,8 +736,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdsa.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ecdsa.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdsa.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ecdsa.s: __/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
@@ -745,8 +745,8 @@ __/dependencies/mbedtls-2.6.0/library/ecdsa.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ecdsa.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecdsa.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ecjpake.o: __/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
@@ -754,8 +754,8 @@ __/dependencies/mbedtls-2.6.0/library/ecjpake.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ecjpake.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecjpake.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ecjpake.i: __/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
@@ -763,8 +763,8 @@ __/dependencies/mbedtls-2.6.0/library/ecjpake.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ecjpake.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecjpake.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ecjpake.s: __/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
@@ -772,8 +772,8 @@ __/dependencies/mbedtls-2.6.0/library/ecjpake.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ecjpake.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecjpake.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ecp.o: __/dependencies/mbedtls-2.6.0/library/ecp.c.o
@@ -781,8 +781,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ecp.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ecp.i: __/dependencies/mbedtls-2.6.0/library/ecp.c.i
@@ -790,8 +790,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ecp.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ecp.s: __/dependencies/mbedtls-2.6.0/library/ecp.c.s
@@ -799,8 +799,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ecp.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.o: __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
@@ -808,8 +808,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp_curves.o: __/dependencies/mbedtls-2.6.
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.i: __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
@@ -817,8 +817,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp_curves.i: __/dependencies/mbedtls-2.6.
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.s: __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
@@ -826,8 +826,8 @@ __/dependencies/mbedtls-2.6.0/library/ecp_curves.s: __/dependencies/mbedtls-2.6.
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ecp_curves.c.s
 
 __/dependencies/mbedtls-2.6.0/library/entropy.o: __/dependencies/mbedtls-2.6.0/library/entropy.c.o
@@ -835,8 +835,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/entropy.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy.c.o
 
 __/dependencies/mbedtls-2.6.0/library/entropy.i: __/dependencies/mbedtls-2.6.0/library/entropy.c.i
@@ -844,8 +844,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/entropy.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy.c.i
 
 __/dependencies/mbedtls-2.6.0/library/entropy.s: __/dependencies/mbedtls-2.6.0/library/entropy.c.s
@@ -853,8 +853,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/entropy.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy.c.s
 
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.o: __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
@@ -862,8 +862,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy_poll.o: __/dependencies/mbedtls-2.
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.o
 
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.i: __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
@@ -871,8 +871,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy_poll.i: __/dependencies/mbedtls-2.
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.i
 
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.s: __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
@@ -880,8 +880,8 @@ __/dependencies/mbedtls-2.6.0/library/entropy_poll.s: __/dependencies/mbedtls-2.
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/entropy_poll.c.s
 
 __/dependencies/mbedtls-2.6.0/library/error.o: __/dependencies/mbedtls-2.6.0/library/error.c.o
@@ -889,8 +889,8 @@ __/dependencies/mbedtls-2.6.0/library/error.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/error.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/error.c.o
 
 __/dependencies/mbedtls-2.6.0/library/error.i: __/dependencies/mbedtls-2.6.0/library/error.c.i
@@ -898,8 +898,8 @@ __/dependencies/mbedtls-2.6.0/library/error.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/error.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/error.c.i
 
 __/dependencies/mbedtls-2.6.0/library/error.s: __/dependencies/mbedtls-2.6.0/library/error.c.s
@@ -907,8 +907,8 @@ __/dependencies/mbedtls-2.6.0/library/error.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/error.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/error.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/error.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/error.c.s
 
 __/dependencies/mbedtls-2.6.0/library/gcm.o: __/dependencies/mbedtls-2.6.0/library/gcm.c.o
@@ -916,8 +916,8 @@ __/dependencies/mbedtls-2.6.0/library/gcm.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/gcm.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/gcm.c.o
 
 __/dependencies/mbedtls-2.6.0/library/gcm.i: __/dependencies/mbedtls-2.6.0/library/gcm.c.i
@@ -925,8 +925,8 @@ __/dependencies/mbedtls-2.6.0/library/gcm.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/gcm.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/gcm.c.i
 
 __/dependencies/mbedtls-2.6.0/library/gcm.s: __/dependencies/mbedtls-2.6.0/library/gcm.c.s
@@ -934,8 +934,8 @@ __/dependencies/mbedtls-2.6.0/library/gcm.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/gcm.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/gcm.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/gcm.c.s
 
 __/dependencies/mbedtls-2.6.0/library/havege.o: __/dependencies/mbedtls-2.6.0/library/havege.c.o
@@ -943,8 +943,8 @@ __/dependencies/mbedtls-2.6.0/library/havege.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/havege.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/havege.c.o
 
 __/dependencies/mbedtls-2.6.0/library/havege.i: __/dependencies/mbedtls-2.6.0/library/havege.c.i
@@ -952,8 +952,8 @@ __/dependencies/mbedtls-2.6.0/library/havege.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/havege.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/havege.c.i
 
 __/dependencies/mbedtls-2.6.0/library/havege.s: __/dependencies/mbedtls-2.6.0/library/havege.c.s
@@ -961,8 +961,8 @@ __/dependencies/mbedtls-2.6.0/library/havege.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/havege.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/havege.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/havege.c.s
 
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.o: __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
@@ -970,8 +970,8 @@ __/dependencies/mbedtls-2.6.0/library/hmac_drbg.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.o
 
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.i: __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
@@ -979,8 +979,8 @@ __/dependencies/mbedtls-2.6.0/library/hmac_drbg.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.i
 
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.s: __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
@@ -988,8 +988,8 @@ __/dependencies/mbedtls-2.6.0/library/hmac_drbg.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/hmac_drbg.c.s
 
 __/dependencies/mbedtls-2.6.0/library/md.o: __/dependencies/mbedtls-2.6.0/library/md.c.o
@@ -997,8 +997,8 @@ __/dependencies/mbedtls-2.6.0/library/md.o: __/dependencies/mbedtls-2.6.0/librar
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/md.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md.c.o
 
 __/dependencies/mbedtls-2.6.0/library/md.i: __/dependencies/mbedtls-2.6.0/library/md.c.i
@@ -1006,8 +1006,8 @@ __/dependencies/mbedtls-2.6.0/library/md.i: __/dependencies/mbedtls-2.6.0/librar
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/md.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md.c.i
 
 __/dependencies/mbedtls-2.6.0/library/md.s: __/dependencies/mbedtls-2.6.0/library/md.c.s
@@ -1015,8 +1015,8 @@ __/dependencies/mbedtls-2.6.0/library/md.s: __/dependencies/mbedtls-2.6.0/librar
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/md.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md.c.s
 
 __/dependencies/mbedtls-2.6.0/library/md2.o: __/dependencies/mbedtls-2.6.0/library/md2.c.o
@@ -1024,8 +1024,8 @@ __/dependencies/mbedtls-2.6.0/library/md2.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/md2.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md2.c.o
 
 __/dependencies/mbedtls-2.6.0/library/md2.i: __/dependencies/mbedtls-2.6.0/library/md2.c.i
@@ -1033,8 +1033,8 @@ __/dependencies/mbedtls-2.6.0/library/md2.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/md2.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md2.c.i
 
 __/dependencies/mbedtls-2.6.0/library/md2.s: __/dependencies/mbedtls-2.6.0/library/md2.c.s
@@ -1042,8 +1042,8 @@ __/dependencies/mbedtls-2.6.0/library/md2.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/md2.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md2.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md2.c.s
 
 __/dependencies/mbedtls-2.6.0/library/md4.o: __/dependencies/mbedtls-2.6.0/library/md4.c.o
@@ -1051,8 +1051,8 @@ __/dependencies/mbedtls-2.6.0/library/md4.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/md4.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md4.c.o
 
 __/dependencies/mbedtls-2.6.0/library/md4.i: __/dependencies/mbedtls-2.6.0/library/md4.c.i
@@ -1060,8 +1060,8 @@ __/dependencies/mbedtls-2.6.0/library/md4.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/md4.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md4.c.i
 
 __/dependencies/mbedtls-2.6.0/library/md4.s: __/dependencies/mbedtls-2.6.0/library/md4.c.s
@@ -1069,8 +1069,8 @@ __/dependencies/mbedtls-2.6.0/library/md4.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/md4.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md4.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md4.c.s
 
 __/dependencies/mbedtls-2.6.0/library/md5.o: __/dependencies/mbedtls-2.6.0/library/md5.c.o
@@ -1078,8 +1078,8 @@ __/dependencies/mbedtls-2.6.0/library/md5.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/md5.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md5.c.o
 
 __/dependencies/mbedtls-2.6.0/library/md5.i: __/dependencies/mbedtls-2.6.0/library/md5.c.i
@@ -1087,8 +1087,8 @@ __/dependencies/mbedtls-2.6.0/library/md5.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/md5.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md5.c.i
 
 __/dependencies/mbedtls-2.6.0/library/md5.s: __/dependencies/mbedtls-2.6.0/library/md5.c.s
@@ -1096,8 +1096,8 @@ __/dependencies/mbedtls-2.6.0/library/md5.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/md5.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md5.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md5.c.s
 
 __/dependencies/mbedtls-2.6.0/library/md_wrap.o: __/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
@@ -1105,8 +1105,8 @@ __/dependencies/mbedtls-2.6.0/library/md_wrap.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/md_wrap.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md_wrap.c.o
 
 __/dependencies/mbedtls-2.6.0/library/md_wrap.i: __/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
@@ -1114,8 +1114,8 @@ __/dependencies/mbedtls-2.6.0/library/md_wrap.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/md_wrap.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md_wrap.c.i
 
 __/dependencies/mbedtls-2.6.0/library/md_wrap.s: __/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
@@ -1123,8 +1123,8 @@ __/dependencies/mbedtls-2.6.0/library/md_wrap.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/md_wrap.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/md_wrap.c.s
 
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.o: __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
@@ -1132,8 +1132,8 @@ __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.o: __/dependencies/mbe
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.o
 
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.i: __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
@@ -1141,8 +1141,8 @@ __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.i: __/dependencies/mbe
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.i
 
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.s: __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
@@ -1150,8 +1150,8 @@ __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.s: __/dependencies/mbe
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/memory_buffer_alloc.c.s
 
 __/dependencies/mbedtls-2.6.0/library/net_sockets.o: __/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
@@ -1159,8 +1159,8 @@ __/dependencies/mbedtls-2.6.0/library/net_sockets.o: __/dependencies/mbedtls-2.6
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/net_sockets.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/net_sockets.c.o
 
 __/dependencies/mbedtls-2.6.0/library/net_sockets.i: __/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
@@ -1168,8 +1168,8 @@ __/dependencies/mbedtls-2.6.0/library/net_sockets.i: __/dependencies/mbedtls-2.6
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/net_sockets.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/net_sockets.c.i
 
 __/dependencies/mbedtls-2.6.0/library/net_sockets.s: __/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
@@ -1177,8 +1177,8 @@ __/dependencies/mbedtls-2.6.0/library/net_sockets.s: __/dependencies/mbedtls-2.6
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/net_sockets.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/net_sockets.c.s
 
 __/dependencies/mbedtls-2.6.0/library/oid.o: __/dependencies/mbedtls-2.6.0/library/oid.c.o
@@ -1186,8 +1186,8 @@ __/dependencies/mbedtls-2.6.0/library/oid.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/oid.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/oid.c.o
 
 __/dependencies/mbedtls-2.6.0/library/oid.i: __/dependencies/mbedtls-2.6.0/library/oid.c.i
@@ -1195,8 +1195,8 @@ __/dependencies/mbedtls-2.6.0/library/oid.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/oid.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/oid.c.i
 
 __/dependencies/mbedtls-2.6.0/library/oid.s: __/dependencies/mbedtls-2.6.0/library/oid.c.s
@@ -1204,8 +1204,8 @@ __/dependencies/mbedtls-2.6.0/library/oid.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/oid.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/oid.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/oid.c.s
 
 __/dependencies/mbedtls-2.6.0/library/padlock.o: __/dependencies/mbedtls-2.6.0/library/padlock.c.o
@@ -1213,8 +1213,8 @@ __/dependencies/mbedtls-2.6.0/library/padlock.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/padlock.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/padlock.c.o
 
 __/dependencies/mbedtls-2.6.0/library/padlock.i: __/dependencies/mbedtls-2.6.0/library/padlock.c.i
@@ -1222,8 +1222,8 @@ __/dependencies/mbedtls-2.6.0/library/padlock.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/padlock.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/padlock.c.i
 
 __/dependencies/mbedtls-2.6.0/library/padlock.s: __/dependencies/mbedtls-2.6.0/library/padlock.c.s
@@ -1231,8 +1231,8 @@ __/dependencies/mbedtls-2.6.0/library/padlock.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/padlock.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/padlock.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/padlock.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pem.o: __/dependencies/mbedtls-2.6.0/library/pem.c.o
@@ -1240,8 +1240,8 @@ __/dependencies/mbedtls-2.6.0/library/pem.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pem.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pem.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pem.i: __/dependencies/mbedtls-2.6.0/library/pem.c.i
@@ -1249,8 +1249,8 @@ __/dependencies/mbedtls-2.6.0/library/pem.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pem.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pem.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pem.s: __/dependencies/mbedtls-2.6.0/library/pem.c.s
@@ -1258,8 +1258,8 @@ __/dependencies/mbedtls-2.6.0/library/pem.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pem.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pem.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pem.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pk.o: __/dependencies/mbedtls-2.6.0/library/pk.c.o
@@ -1267,8 +1267,8 @@ __/dependencies/mbedtls-2.6.0/library/pk.o: __/dependencies/mbedtls-2.6.0/librar
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pk.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pk.i: __/dependencies/mbedtls-2.6.0/library/pk.c.i
@@ -1276,8 +1276,8 @@ __/dependencies/mbedtls-2.6.0/library/pk.i: __/dependencies/mbedtls-2.6.0/librar
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pk.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pk.s: __/dependencies/mbedtls-2.6.0/library/pk.c.s
@@ -1285,8 +1285,8 @@ __/dependencies/mbedtls-2.6.0/library/pk.s: __/dependencies/mbedtls-2.6.0/librar
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pk.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.o: __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
@@ -1294,8 +1294,8 @@ __/dependencies/mbedtls-2.6.0/library/pk_wrap.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.i: __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
@@ -1303,8 +1303,8 @@ __/dependencies/mbedtls-2.6.0/library/pk_wrap.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.s: __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
@@ -1312,8 +1312,8 @@ __/dependencies/mbedtls-2.6.0/library/pk_wrap.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pk_wrap.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pkcs11.o: __/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
@@ -1321,8 +1321,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs11.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pkcs11.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs11.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pkcs11.i: __/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
@@ -1330,8 +1330,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs11.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pkcs11.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs11.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pkcs11.s: __/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
@@ -1339,8 +1339,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs11.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pkcs11.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs11.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pkcs12.o: __/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
@@ -1348,8 +1348,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs12.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pkcs12.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs12.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pkcs12.i: __/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
@@ -1357,8 +1357,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs12.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pkcs12.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs12.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pkcs12.s: __/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
@@ -1366,8 +1366,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs12.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pkcs12.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs12.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pkcs5.o: __/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
@@ -1375,8 +1375,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs5.o: __/dependencies/mbedtls-2.6.0/lib
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pkcs5.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs5.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pkcs5.i: __/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
@@ -1384,8 +1384,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs5.i: __/dependencies/mbedtls-2.6.0/lib
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pkcs5.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs5.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pkcs5.s: __/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
@@ -1393,8 +1393,8 @@ __/dependencies/mbedtls-2.6.0/library/pkcs5.s: __/dependencies/mbedtls-2.6.0/lib
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pkcs5.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkcs5.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pkparse.o: __/dependencies/mbedtls-2.6.0/library/pkparse.c.o
@@ -1402,8 +1402,8 @@ __/dependencies/mbedtls-2.6.0/library/pkparse.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pkparse.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkparse.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pkparse.i: __/dependencies/mbedtls-2.6.0/library/pkparse.c.i
@@ -1411,8 +1411,8 @@ __/dependencies/mbedtls-2.6.0/library/pkparse.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pkparse.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkparse.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pkparse.s: __/dependencies/mbedtls-2.6.0/library/pkparse.c.s
@@ -1420,8 +1420,8 @@ __/dependencies/mbedtls-2.6.0/library/pkparse.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pkparse.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkparse.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkparse.c.s
 
 __/dependencies/mbedtls-2.6.0/library/pkwrite.o: __/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
@@ -1429,8 +1429,8 @@ __/dependencies/mbedtls-2.6.0/library/pkwrite.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/pkwrite.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkwrite.c.o
 
 __/dependencies/mbedtls-2.6.0/library/pkwrite.i: __/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
@@ -1438,8 +1438,8 @@ __/dependencies/mbedtls-2.6.0/library/pkwrite.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/pkwrite.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkwrite.c.i
 
 __/dependencies/mbedtls-2.6.0/library/pkwrite.s: __/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
@@ -1447,8 +1447,8 @@ __/dependencies/mbedtls-2.6.0/library/pkwrite.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/pkwrite.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/pkwrite.c.s
 
 __/dependencies/mbedtls-2.6.0/library/platform.o: __/dependencies/mbedtls-2.6.0/library/platform.c.o
@@ -1456,8 +1456,8 @@ __/dependencies/mbedtls-2.6.0/library/platform.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/platform.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/platform.c.o
 
 __/dependencies/mbedtls-2.6.0/library/platform.i: __/dependencies/mbedtls-2.6.0/library/platform.c.i
@@ -1465,8 +1465,8 @@ __/dependencies/mbedtls-2.6.0/library/platform.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/platform.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/platform.c.i
 
 __/dependencies/mbedtls-2.6.0/library/platform.s: __/dependencies/mbedtls-2.6.0/library/platform.c.s
@@ -1474,8 +1474,8 @@ __/dependencies/mbedtls-2.6.0/library/platform.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/platform.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/platform.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/platform.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ripemd160.o: __/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
@@ -1483,8 +1483,8 @@ __/dependencies/mbedtls-2.6.0/library/ripemd160.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ripemd160.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ripemd160.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ripemd160.i: __/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
@@ -1492,8 +1492,8 @@ __/dependencies/mbedtls-2.6.0/library/ripemd160.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ripemd160.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ripemd160.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ripemd160.s: __/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
@@ -1501,8 +1501,8 @@ __/dependencies/mbedtls-2.6.0/library/ripemd160.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ripemd160.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ripemd160.c.s
 
 __/dependencies/mbedtls-2.6.0/library/rsa.o: __/dependencies/mbedtls-2.6.0/library/rsa.c.o
@@ -1510,8 +1510,8 @@ __/dependencies/mbedtls-2.6.0/library/rsa.o: __/dependencies/mbedtls-2.6.0/libra
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/rsa.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/rsa.c.o
 
 __/dependencies/mbedtls-2.6.0/library/rsa.i: __/dependencies/mbedtls-2.6.0/library/rsa.c.i
@@ -1519,8 +1519,8 @@ __/dependencies/mbedtls-2.6.0/library/rsa.i: __/dependencies/mbedtls-2.6.0/libra
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/rsa.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/rsa.c.i
 
 __/dependencies/mbedtls-2.6.0/library/rsa.s: __/dependencies/mbedtls-2.6.0/library/rsa.c.s
@@ -1528,8 +1528,8 @@ __/dependencies/mbedtls-2.6.0/library/rsa.s: __/dependencies/mbedtls-2.6.0/libra
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/rsa.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/rsa.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/rsa.c.s
 
 __/dependencies/mbedtls-2.6.0/library/sha1.o: __/dependencies/mbedtls-2.6.0/library/sha1.c.o
@@ -1537,8 +1537,8 @@ __/dependencies/mbedtls-2.6.0/library/sha1.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/sha1.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha1.c.o
 
 __/dependencies/mbedtls-2.6.0/library/sha1.i: __/dependencies/mbedtls-2.6.0/library/sha1.c.i
@@ -1546,8 +1546,8 @@ __/dependencies/mbedtls-2.6.0/library/sha1.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/sha1.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha1.c.i
 
 __/dependencies/mbedtls-2.6.0/library/sha1.s: __/dependencies/mbedtls-2.6.0/library/sha1.c.s
@@ -1555,8 +1555,8 @@ __/dependencies/mbedtls-2.6.0/library/sha1.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/sha1.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha1.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha1.c.s
 
 __/dependencies/mbedtls-2.6.0/library/sha256.o: __/dependencies/mbedtls-2.6.0/library/sha256.c.o
@@ -1564,8 +1564,8 @@ __/dependencies/mbedtls-2.6.0/library/sha256.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/sha256.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha256.c.o
 
 __/dependencies/mbedtls-2.6.0/library/sha256.i: __/dependencies/mbedtls-2.6.0/library/sha256.c.i
@@ -1573,8 +1573,8 @@ __/dependencies/mbedtls-2.6.0/library/sha256.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/sha256.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha256.c.i
 
 __/dependencies/mbedtls-2.6.0/library/sha256.s: __/dependencies/mbedtls-2.6.0/library/sha256.c.s
@@ -1582,8 +1582,8 @@ __/dependencies/mbedtls-2.6.0/library/sha256.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/sha256.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha256.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha256.c.s
 
 __/dependencies/mbedtls-2.6.0/library/sha512.o: __/dependencies/mbedtls-2.6.0/library/sha512.c.o
@@ -1591,8 +1591,8 @@ __/dependencies/mbedtls-2.6.0/library/sha512.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/sha512.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha512.c.o
 
 __/dependencies/mbedtls-2.6.0/library/sha512.i: __/dependencies/mbedtls-2.6.0/library/sha512.c.i
@@ -1600,8 +1600,8 @@ __/dependencies/mbedtls-2.6.0/library/sha512.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/sha512.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha512.c.i
 
 __/dependencies/mbedtls-2.6.0/library/sha512.s: __/dependencies/mbedtls-2.6.0/library/sha512.c.s
@@ -1609,8 +1609,8 @@ __/dependencies/mbedtls-2.6.0/library/sha512.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/sha512.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/sha512.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/sha512.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.o: __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
@@ -1618,8 +1618,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cache.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.i: __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
@@ -1627,8 +1627,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cache.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.s: __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
@@ -1636,8 +1636,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cache.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cache.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.o: __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
@@ -1645,8 +1645,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.o: __/dependencies/mbedtl
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.i: __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
@@ -1654,8 +1654,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.i: __/dependencies/mbedtl
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.s: __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
@@ -1663,8 +1663,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.s: __/dependencies/mbedtl
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ciphersuites.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.o: __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
@@ -1672,8 +1672,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cli.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.i: __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
@@ -1681,8 +1681,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cli.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.s: __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
@@ -1690,8 +1690,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cli.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cli.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.o: __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
@@ -1699,8 +1699,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cookie.o: __/dependencies/mbedtls-2.6.
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.i: __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
@@ -1708,8 +1708,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cookie.i: __/dependencies/mbedtls-2.6.
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.s: __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
@@ -1717,8 +1717,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_cookie.s: __/dependencies/mbedtls-2.6.
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_cookie.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.o: __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
@@ -1726,8 +1726,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_srv.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.i: __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
@@ -1735,8 +1735,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_srv.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.s: __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
@@ -1744,8 +1744,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_srv.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_srv.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.o: __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
@@ -1753,8 +1753,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ticket.o: __/dependencies/mbedtls-2.6.
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.i: __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
@@ -1762,8 +1762,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ticket.i: __/dependencies/mbedtls-2.6.
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.s: __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
@@ -1771,8 +1771,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_ticket.s: __/dependencies/mbedtls-2.6.
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_ticket.c.s
 
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.o: __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
@@ -1780,8 +1780,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_tls.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.o
 
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.i: __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
@@ -1789,8 +1789,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_tls.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.i
 
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.s: __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
@@ -1798,8 +1798,8 @@ __/dependencies/mbedtls-2.6.0/library/ssl_tls.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/ssl_tls.c.s
 
 __/dependencies/mbedtls-2.6.0/library/threading.o: __/dependencies/mbedtls-2.6.0/library/threading.c.o
@@ -1807,8 +1807,8 @@ __/dependencies/mbedtls-2.6.0/library/threading.o: __/dependencies/mbedtls-2.6.0
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/threading.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/threading.c.o
 
 __/dependencies/mbedtls-2.6.0/library/threading.i: __/dependencies/mbedtls-2.6.0/library/threading.c.i
@@ -1816,8 +1816,8 @@ __/dependencies/mbedtls-2.6.0/library/threading.i: __/dependencies/mbedtls-2.6.0
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/threading.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/threading.c.i
 
 __/dependencies/mbedtls-2.6.0/library/threading.s: __/dependencies/mbedtls-2.6.0/library/threading.c.s
@@ -1825,8 +1825,8 @@ __/dependencies/mbedtls-2.6.0/library/threading.s: __/dependencies/mbedtls-2.6.0
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/threading.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/threading.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/threading.c.s
 
 __/dependencies/mbedtls-2.6.0/library/timing.o: __/dependencies/mbedtls-2.6.0/library/timing.c.o
@@ -1834,8 +1834,8 @@ __/dependencies/mbedtls-2.6.0/library/timing.o: __/dependencies/mbedtls-2.6.0/li
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/timing.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/timing.c.o
 
 __/dependencies/mbedtls-2.6.0/library/timing.i: __/dependencies/mbedtls-2.6.0/library/timing.c.i
@@ -1843,8 +1843,8 @@ __/dependencies/mbedtls-2.6.0/library/timing.i: __/dependencies/mbedtls-2.6.0/li
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/timing.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/timing.c.i
 
 __/dependencies/mbedtls-2.6.0/library/timing.s: __/dependencies/mbedtls-2.6.0/library/timing.c.s
@@ -1852,8 +1852,8 @@ __/dependencies/mbedtls-2.6.0/library/timing.s: __/dependencies/mbedtls-2.6.0/li
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/timing.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/timing.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/timing.c.s
 
 __/dependencies/mbedtls-2.6.0/library/version.o: __/dependencies/mbedtls-2.6.0/library/version.c.o
@@ -1861,8 +1861,8 @@ __/dependencies/mbedtls-2.6.0/library/version.o: __/dependencies/mbedtls-2.6.0/l
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/version.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version.c.o
 
 __/dependencies/mbedtls-2.6.0/library/version.i: __/dependencies/mbedtls-2.6.0/library/version.c.i
@@ -1870,8 +1870,8 @@ __/dependencies/mbedtls-2.6.0/library/version.i: __/dependencies/mbedtls-2.6.0/l
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/version.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version.c.i
 
 __/dependencies/mbedtls-2.6.0/library/version.s: __/dependencies/mbedtls-2.6.0/library/version.c.s
@@ -1879,8 +1879,8 @@ __/dependencies/mbedtls-2.6.0/library/version.s: __/dependencies/mbedtls-2.6.0/l
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/version.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version.c.s
 
 __/dependencies/mbedtls-2.6.0/library/version_features.o: __/dependencies/mbedtls-2.6.0/library/version_features.c.o
@@ -1888,8 +1888,8 @@ __/dependencies/mbedtls-2.6.0/library/version_features.o: __/dependencies/mbedtl
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/version_features.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version_features.c.o
 
 __/dependencies/mbedtls-2.6.0/library/version_features.i: __/dependencies/mbedtls-2.6.0/library/version_features.c.i
@@ -1897,8 +1897,8 @@ __/dependencies/mbedtls-2.6.0/library/version_features.i: __/dependencies/mbedtl
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/version_features.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version_features.c.i
 
 __/dependencies/mbedtls-2.6.0/library/version_features.s: __/dependencies/mbedtls-2.6.0/library/version_features.c.s
@@ -1906,8 +1906,8 @@ __/dependencies/mbedtls-2.6.0/library/version_features.s: __/dependencies/mbedtl
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/version_features.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/version_features.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/version_features.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509.o: __/dependencies/mbedtls-2.6.0/library/x509.c.o
@@ -1915,8 +1915,8 @@ __/dependencies/mbedtls-2.6.0/library/x509.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509.i: __/dependencies/mbedtls-2.6.0/library/x509.c.i
@@ -1924,8 +1924,8 @@ __/dependencies/mbedtls-2.6.0/library/x509.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509.s: __/dependencies/mbedtls-2.6.0/library/x509.c.s
@@ -1933,8 +1933,8 @@ __/dependencies/mbedtls-2.6.0/library/x509.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509_create.o: __/dependencies/mbedtls-2.6.0/library/x509_create.c.o
@@ -1942,8 +1942,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_create.o: __/dependencies/mbedtls-2.6
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509_create.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_create.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509_create.i: __/dependencies/mbedtls-2.6.0/library/x509_create.c.i
@@ -1951,8 +1951,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_create.i: __/dependencies/mbedtls-2.6
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509_create.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_create.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509_create.s: __/dependencies/mbedtls-2.6.0/library/x509_create.c.s
@@ -1960,8 +1960,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_create.s: __/dependencies/mbedtls-2.6
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509_create.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_create.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_create.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509_crl.o: __/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
@@ -1969,8 +1969,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crl.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509_crl.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crl.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509_crl.i: __/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
@@ -1978,8 +1978,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crl.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509_crl.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crl.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509_crl.s: __/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
@@ -1987,8 +1987,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crl.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509_crl.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crl.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509_crt.o: __/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
@@ -1996,8 +1996,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crt.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509_crt.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crt.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509_crt.i: __/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
@@ -2005,8 +2005,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crt.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509_crt.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crt.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509_crt.s: __/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
@@ -2014,8 +2014,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_crt.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509_crt.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_crt.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509_csr.o: __/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
@@ -2023,8 +2023,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_csr.o: __/dependencies/mbedtls-2.6.0/
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509_csr.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_csr.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509_csr.i: __/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
@@ -2032,8 +2032,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_csr.i: __/dependencies/mbedtls-2.6.0/
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509_csr.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_csr.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509_csr.s: __/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
@@ -2041,8 +2041,8 @@ __/dependencies/mbedtls-2.6.0/library/x509_csr.s: __/dependencies/mbedtls-2.6.0/
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509_csr.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509_csr.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.o: __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
@@ -2050,8 +2050,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_crt.o: __/dependencies/mbedtls-2
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.i: __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
@@ -2059,8 +2059,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_crt.i: __/dependencies/mbedtls-2
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.s: __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
@@ -2068,8 +2068,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_crt.s: __/dependencies/mbedtls-2
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_crt.c.s
 
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.o: __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
@@ -2077,8 +2077,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_csr.o: __/dependencies/mbedtls-2
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.o
 
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.i: __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
@@ -2086,8 +2086,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_csr.i: __/dependencies/mbedtls-2
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.i
 
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.s: __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
@@ -2095,8 +2095,8 @@ __/dependencies/mbedtls-2.6.0/library/x509write_csr.s: __/dependencies/mbedtls-2
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/x509write_csr.c.s
 
 __/dependencies/mbedtls-2.6.0/library/xtea.o: __/dependencies/mbedtls-2.6.0/library/xtea.c.o
@@ -2104,8 +2104,8 @@ __/dependencies/mbedtls-2.6.0/library/xtea.o: __/dependencies/mbedtls-2.6.0/libr
 
 # target to build an object file
 __/dependencies/mbedtls-2.6.0/library/xtea.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.o
 .PHONY : __/dependencies/mbedtls-2.6.0/library/xtea.c.o
 
 __/dependencies/mbedtls-2.6.0/library/xtea.i: __/dependencies/mbedtls-2.6.0/library/xtea.c.i
@@ -2113,8 +2113,8 @@ __/dependencies/mbedtls-2.6.0/library/xtea.i: __/dependencies/mbedtls-2.6.0/libr
 
 # target to preprocess a source file
 __/dependencies/mbedtls-2.6.0/library/xtea.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.i
 .PHONY : __/dependencies/mbedtls-2.6.0/library/xtea.c.i
 
 __/dependencies/mbedtls-2.6.0/library/xtea.s: __/dependencies/mbedtls-2.6.0/library/xtea.c.s
@@ -2122,8 +2122,8 @@ __/dependencies/mbedtls-2.6.0/library/xtea.s: __/dependencies/mbedtls-2.6.0/libr
 
 # target to generate assembly for a file
 __/dependencies/mbedtls-2.6.0/library/xtea.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/__/dependencies/mbedtls-2.6.0/library/xtea.c.s
 .PHONY : __/dependencies/mbedtls-2.6.0/library/xtea.c.s
 
 common/linked_list.o: common/linked_list.c.o
@@ -2131,8 +2131,8 @@ common/linked_list.o: common/linked_list.c.o
 
 # target to build an object file
 common/linked_list.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.o
 .PHONY : common/linked_list.c.o
 
 common/linked_list.i: common/linked_list.c.i
@@ -2140,8 +2140,8 @@ common/linked_list.i: common/linked_list.c.i
 
 # target to preprocess a source file
 common/linked_list.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.i
 .PHONY : common/linked_list.c.i
 
 common/linked_list.s: common/linked_list.c.s
@@ -2149,8 +2149,8 @@ common/linked_list.s: common/linked_list.c.s
 
 # target to generate assembly for a file
 common/linked_list.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/common/linked_list.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/common/linked_list.c.s
 .PHONY : common/linked_list.c.s
 
 hal/memory/lib_memory.o: hal/memory/lib_memory.c.o
@@ -2158,8 +2158,8 @@ hal/memory/lib_memory.o: hal/memory/lib_memory.c.o
 
 # target to build an object file
 hal/memory/lib_memory.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.o
 .PHONY : hal/memory/lib_memory.c.o
 
 hal/memory/lib_memory.i: hal/memory/lib_memory.c.i
@@ -2167,8 +2167,8 @@ hal/memory/lib_memory.i: hal/memory/lib_memory.c.i
 
 # target to preprocess a source file
 hal/memory/lib_memory.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.i
 .PHONY : hal/memory/lib_memory.c.i
 
 hal/memory/lib_memory.s: hal/memory/lib_memory.c.s
@@ -2176,8 +2176,8 @@ hal/memory/lib_memory.s: hal/memory/lib_memory.c.s
 
 # target to generate assembly for a file
 hal/memory/lib_memory.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/memory/lib_memory.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/memory/lib_memory.c.s
 .PHONY : hal/memory/lib_memory.c.s
 
 hal/serial/linux/serial_port_linux.o: hal/serial/linux/serial_port_linux.c.o
@@ -2185,8 +2185,8 @@ hal/serial/linux/serial_port_linux.o: hal/serial/linux/serial_port_linux.c.o
 
 # target to build an object file
 hal/serial/linux/serial_port_linux.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.o
 .PHONY : hal/serial/linux/serial_port_linux.c.o
 
 hal/serial/linux/serial_port_linux.i: hal/serial/linux/serial_port_linux.c.i
@@ -2194,8 +2194,8 @@ hal/serial/linux/serial_port_linux.i: hal/serial/linux/serial_port_linux.c.i
 
 # target to preprocess a source file
 hal/serial/linux/serial_port_linux.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.i
 .PHONY : hal/serial/linux/serial_port_linux.c.i
 
 hal/serial/linux/serial_port_linux.s: hal/serial/linux/serial_port_linux.c.s
@@ -2203,8 +2203,8 @@ hal/serial/linux/serial_port_linux.s: hal/serial/linux/serial_port_linux.c.s
 
 # target to generate assembly for a file
 hal/serial/linux/serial_port_linux.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/serial/linux/serial_port_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/serial/linux/serial_port_linux.c.s
 .PHONY : hal/serial/linux/serial_port_linux.c.s
 
 hal/socket/linux/socket_linux.o: hal/socket/linux/socket_linux.c.o
@@ -2212,8 +2212,8 @@ hal/socket/linux/socket_linux.o: hal/socket/linux/socket_linux.c.o
 
 # target to build an object file
 hal/socket/linux/socket_linux.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.o
 .PHONY : hal/socket/linux/socket_linux.c.o
 
 hal/socket/linux/socket_linux.i: hal/socket/linux/socket_linux.c.i
@@ -2221,8 +2221,8 @@ hal/socket/linux/socket_linux.i: hal/socket/linux/socket_linux.c.i
 
 # target to preprocess a source file
 hal/socket/linux/socket_linux.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.i
 .PHONY : hal/socket/linux/socket_linux.c.i
 
 hal/socket/linux/socket_linux.s: hal/socket/linux/socket_linux.c.s
@@ -2230,8 +2230,8 @@ hal/socket/linux/socket_linux.s: hal/socket/linux/socket_linux.c.s
 
 # target to generate assembly for a file
 hal/socket/linux/socket_linux.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/socket/linux/socket_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/socket/linux/socket_linux.c.s
 .PHONY : hal/socket/linux/socket_linux.c.s
 
 hal/thread/linux/thread_linux.o: hal/thread/linux/thread_linux.c.o
@@ -2239,8 +2239,8 @@ hal/thread/linux/thread_linux.o: hal/thread/linux/thread_linux.c.o
 
 # target to build an object file
 hal/thread/linux/thread_linux.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.o
 .PHONY : hal/thread/linux/thread_linux.c.o
 
 hal/thread/linux/thread_linux.i: hal/thread/linux/thread_linux.c.i
@@ -2248,8 +2248,8 @@ hal/thread/linux/thread_linux.i: hal/thread/linux/thread_linux.c.i
 
 # target to preprocess a source file
 hal/thread/linux/thread_linux.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.i
 .PHONY : hal/thread/linux/thread_linux.c.i
 
 hal/thread/linux/thread_linux.s: hal/thread/linux/thread_linux.c.s
@@ -2257,8 +2257,8 @@ hal/thread/linux/thread_linux.s: hal/thread/linux/thread_linux.c.s
 
 # target to generate assembly for a file
 hal/thread/linux/thread_linux.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/thread/linux/thread_linux.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/thread/linux/thread_linux.c.s
 .PHONY : hal/thread/linux/thread_linux.c.s
 
 hal/time/unix/time.o: hal/time/unix/time.c.o
@@ -2266,8 +2266,8 @@ hal/time/unix/time.o: hal/time/unix/time.c.o
 
 # target to build an object file
 hal/time/unix/time.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.o
 .PHONY : hal/time/unix/time.c.o
 
 hal/time/unix/time.i: hal/time/unix/time.c.i
@@ -2275,8 +2275,8 @@ hal/time/unix/time.i: hal/time/unix/time.c.i
 
 # target to preprocess a source file
 hal/time/unix/time.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.i
 .PHONY : hal/time/unix/time.c.i
 
 hal/time/unix/time.s: hal/time/unix/time.c.s
@@ -2284,8 +2284,8 @@ hal/time/unix/time.s: hal/time/unix/time.c.s
 
 # target to generate assembly for a file
 hal/time/unix/time.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/time/unix/time.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/time/unix/time.c.s
 .PHONY : hal/time/unix/time.c.s
 
 hal/tls/mbedtls/tls_mbedtls.o: hal/tls/mbedtls/tls_mbedtls.c.o
@@ -2293,8 +2293,8 @@ hal/tls/mbedtls/tls_mbedtls.o: hal/tls/mbedtls/tls_mbedtls.c.o
 
 # target to build an object file
 hal/tls/mbedtls/tls_mbedtls.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.o
 .PHONY : hal/tls/mbedtls/tls_mbedtls.c.o
 
 hal/tls/mbedtls/tls_mbedtls.i: hal/tls/mbedtls/tls_mbedtls.c.i
@@ -2302,8 +2302,8 @@ hal/tls/mbedtls/tls_mbedtls.i: hal/tls/mbedtls/tls_mbedtls.c.i
 
 # target to preprocess a source file
 hal/tls/mbedtls/tls_mbedtls.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.i
 .PHONY : hal/tls/mbedtls/tls_mbedtls.c.i
 
 hal/tls/mbedtls/tls_mbedtls.s: hal/tls/mbedtls/tls_mbedtls.c.s
@@ -2311,8 +2311,8 @@ hal/tls/mbedtls/tls_mbedtls.s: hal/tls/mbedtls/tls_mbedtls.c.s
 
 # target to generate assembly for a file
 hal/tls/mbedtls/tls_mbedtls.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/hal/tls/mbedtls/tls_mbedtls.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/hal/tls/mbedtls/tls_mbedtls.c.s
 .PHONY : hal/tls/mbedtls/tls_mbedtls.c.s
 
 iec60870/apl/cpXXtime2a.o: iec60870/apl/cpXXtime2a.c.o
@@ -2320,8 +2320,8 @@ iec60870/apl/cpXXtime2a.o: iec60870/apl/cpXXtime2a.c.o
 
 # target to build an object file
 iec60870/apl/cpXXtime2a.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.o
 .PHONY : iec60870/apl/cpXXtime2a.c.o
 
 iec60870/apl/cpXXtime2a.i: iec60870/apl/cpXXtime2a.c.i
@@ -2329,8 +2329,8 @@ iec60870/apl/cpXXtime2a.i: iec60870/apl/cpXXtime2a.c.i
 
 # target to preprocess a source file
 iec60870/apl/cpXXtime2a.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.i
 .PHONY : iec60870/apl/cpXXtime2a.c.i
 
 iec60870/apl/cpXXtime2a.s: iec60870/apl/cpXXtime2a.c.s
@@ -2338,8 +2338,8 @@ iec60870/apl/cpXXtime2a.s: iec60870/apl/cpXXtime2a.c.s
 
 # target to generate assembly for a file
 iec60870/apl/cpXXtime2a.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/apl/cpXXtime2a.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/apl/cpXXtime2a.c.s
 .PHONY : iec60870/apl/cpXXtime2a.c.s
 
 iec60870/cs101/cs101_asdu.o: iec60870/cs101/cs101_asdu.c.o
@@ -2347,8 +2347,8 @@ iec60870/cs101/cs101_asdu.o: iec60870/cs101/cs101_asdu.c.o
 
 # target to build an object file
 iec60870/cs101/cs101_asdu.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.o
 .PHONY : iec60870/cs101/cs101_asdu.c.o
 
 iec60870/cs101/cs101_asdu.i: iec60870/cs101/cs101_asdu.c.i
@@ -2356,8 +2356,8 @@ iec60870/cs101/cs101_asdu.i: iec60870/cs101/cs101_asdu.c.i
 
 # target to preprocess a source file
 iec60870/cs101/cs101_asdu.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.i
 .PHONY : iec60870/cs101/cs101_asdu.c.i
 
 iec60870/cs101/cs101_asdu.s: iec60870/cs101/cs101_asdu.c.s
@@ -2365,8 +2365,8 @@ iec60870/cs101/cs101_asdu.s: iec60870/cs101/cs101_asdu.c.s
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_asdu.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_asdu.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_asdu.c.s
 .PHONY : iec60870/cs101/cs101_asdu.c.s
 
 iec60870/cs101/cs101_bcr.o: iec60870/cs101/cs101_bcr.c.o
@@ -2374,8 +2374,8 @@ iec60870/cs101/cs101_bcr.o: iec60870/cs101/cs101_bcr.c.o
 
 # target to build an object file
 iec60870/cs101/cs101_bcr.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.o
 .PHONY : iec60870/cs101/cs101_bcr.c.o
 
 iec60870/cs101/cs101_bcr.i: iec60870/cs101/cs101_bcr.c.i
@@ -2383,8 +2383,8 @@ iec60870/cs101/cs101_bcr.i: iec60870/cs101/cs101_bcr.c.i
 
 # target to preprocess a source file
 iec60870/cs101/cs101_bcr.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.i
 .PHONY : iec60870/cs101/cs101_bcr.c.i
 
 iec60870/cs101/cs101_bcr.s: iec60870/cs101/cs101_bcr.c.s
@@ -2392,8 +2392,8 @@ iec60870/cs101/cs101_bcr.s: iec60870/cs101/cs101_bcr.c.s
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_bcr.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_bcr.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_bcr.c.s
 .PHONY : iec60870/cs101/cs101_bcr.c.s
 
 iec60870/cs101/cs101_information_objects.o: iec60870/cs101/cs101_information_objects.c.o
@@ -2401,8 +2401,8 @@ iec60870/cs101/cs101_information_objects.o: iec60870/cs101/cs101_information_obj
 
 # target to build an object file
 iec60870/cs101/cs101_information_objects.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.o
 .PHONY : iec60870/cs101/cs101_information_objects.c.o
 
 iec60870/cs101/cs101_information_objects.i: iec60870/cs101/cs101_information_objects.c.i
@@ -2410,8 +2410,8 @@ iec60870/cs101/cs101_information_objects.i: iec60870/cs101/cs101_information_obj
 
 # target to preprocess a source file
 iec60870/cs101/cs101_information_objects.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.i
 .PHONY : iec60870/cs101/cs101_information_objects.c.i
 
 iec60870/cs101/cs101_information_objects.s: iec60870/cs101/cs101_information_objects.c.s
@@ -2419,8 +2419,8 @@ iec60870/cs101/cs101_information_objects.s: iec60870/cs101/cs101_information_obj
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_information_objects.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_information_objects.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_information_objects.c.s
 .PHONY : iec60870/cs101/cs101_information_objects.c.s
 
 iec60870/cs101/cs101_master.o: iec60870/cs101/cs101_master.c.o
@@ -2428,8 +2428,8 @@ iec60870/cs101/cs101_master.o: iec60870/cs101/cs101_master.c.o
 
 # target to build an object file
 iec60870/cs101/cs101_master.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.o
 .PHONY : iec60870/cs101/cs101_master.c.o
 
 iec60870/cs101/cs101_master.i: iec60870/cs101/cs101_master.c.i
@@ -2437,8 +2437,8 @@ iec60870/cs101/cs101_master.i: iec60870/cs101/cs101_master.c.i
 
 # target to preprocess a source file
 iec60870/cs101/cs101_master.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.i
 .PHONY : iec60870/cs101/cs101_master.c.i
 
 iec60870/cs101/cs101_master.s: iec60870/cs101/cs101_master.c.s
@@ -2446,8 +2446,8 @@ iec60870/cs101/cs101_master.s: iec60870/cs101/cs101_master.c.s
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_master.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master.c.s
 .PHONY : iec60870/cs101/cs101_master.c.s
 
 iec60870/cs101/cs101_master_connection.o: iec60870/cs101/cs101_master_connection.c.o
@@ -2455,8 +2455,8 @@ iec60870/cs101/cs101_master_connection.o: iec60870/cs101/cs101_master_connection
 
 # target to build an object file
 iec60870/cs101/cs101_master_connection.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.o
 .PHONY : iec60870/cs101/cs101_master_connection.c.o
 
 iec60870/cs101/cs101_master_connection.i: iec60870/cs101/cs101_master_connection.c.i
@@ -2464,8 +2464,8 @@ iec60870/cs101/cs101_master_connection.i: iec60870/cs101/cs101_master_connection
 
 # target to preprocess a source file
 iec60870/cs101/cs101_master_connection.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.i
 .PHONY : iec60870/cs101/cs101_master_connection.c.i
 
 iec60870/cs101/cs101_master_connection.s: iec60870/cs101/cs101_master_connection.c.s
@@ -2473,8 +2473,8 @@ iec60870/cs101/cs101_master_connection.s: iec60870/cs101/cs101_master_connection
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_master_connection.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_master_connection.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_master_connection.c.s
 .PHONY : iec60870/cs101/cs101_master_connection.c.s
 
 iec60870/cs101/cs101_queue.o: iec60870/cs101/cs101_queue.c.o
@@ -2482,8 +2482,8 @@ iec60870/cs101/cs101_queue.o: iec60870/cs101/cs101_queue.c.o
 
 # target to build an object file
 iec60870/cs101/cs101_queue.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.o
 .PHONY : iec60870/cs101/cs101_queue.c.o
 
 iec60870/cs101/cs101_queue.i: iec60870/cs101/cs101_queue.c.i
@@ -2491,8 +2491,8 @@ iec60870/cs101/cs101_queue.i: iec60870/cs101/cs101_queue.c.i
 
 # target to preprocess a source file
 iec60870/cs101/cs101_queue.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.i
 .PHONY : iec60870/cs101/cs101_queue.c.i
 
 iec60870/cs101/cs101_queue.s: iec60870/cs101/cs101_queue.c.s
@@ -2500,8 +2500,8 @@ iec60870/cs101/cs101_queue.s: iec60870/cs101/cs101_queue.c.s
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_queue.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_queue.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_queue.c.s
 .PHONY : iec60870/cs101/cs101_queue.c.s
 
 iec60870/cs101/cs101_slave.o: iec60870/cs101/cs101_slave.c.o
@@ -2509,8 +2509,8 @@ iec60870/cs101/cs101_slave.o: iec60870/cs101/cs101_slave.c.o
 
 # target to build an object file
 iec60870/cs101/cs101_slave.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.o
 .PHONY : iec60870/cs101/cs101_slave.c.o
 
 iec60870/cs101/cs101_slave.i: iec60870/cs101/cs101_slave.c.i
@@ -2518,8 +2518,8 @@ iec60870/cs101/cs101_slave.i: iec60870/cs101/cs101_slave.c.i
 
 # target to preprocess a source file
 iec60870/cs101/cs101_slave.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.i
 .PHONY : iec60870/cs101/cs101_slave.c.i
 
 iec60870/cs101/cs101_slave.s: iec60870/cs101/cs101_slave.c.s
@@ -2527,8 +2527,8 @@ iec60870/cs101/cs101_slave.s: iec60870/cs101/cs101_slave.c.s
 
 # target to generate assembly for a file
 iec60870/cs101/cs101_slave.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs101/cs101_slave.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs101/cs101_slave.c.s
 .PHONY : iec60870/cs101/cs101_slave.c.s
 
 iec60870/cs104/cs104_connection.o: iec60870/cs104/cs104_connection.c.o
@@ -2536,8 +2536,8 @@ iec60870/cs104/cs104_connection.o: iec60870/cs104/cs104_connection.c.o
 
 # target to build an object file
 iec60870/cs104/cs104_connection.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.o
 .PHONY : iec60870/cs104/cs104_connection.c.o
 
 iec60870/cs104/cs104_connection.i: iec60870/cs104/cs104_connection.c.i
@@ -2545,8 +2545,8 @@ iec60870/cs104/cs104_connection.i: iec60870/cs104/cs104_connection.c.i
 
 # target to preprocess a source file
 iec60870/cs104/cs104_connection.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.i
 .PHONY : iec60870/cs104/cs104_connection.c.i
 
 iec60870/cs104/cs104_connection.s: iec60870/cs104/cs104_connection.c.s
@@ -2554,8 +2554,8 @@ iec60870/cs104/cs104_connection.s: iec60870/cs104/cs104_connection.c.s
 
 # target to generate assembly for a file
 iec60870/cs104/cs104_connection.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_connection.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_connection.c.s
 .PHONY : iec60870/cs104/cs104_connection.c.s
 
 iec60870/cs104/cs104_frame.o: iec60870/cs104/cs104_frame.c.o
@@ -2563,8 +2563,8 @@ iec60870/cs104/cs104_frame.o: iec60870/cs104/cs104_frame.c.o
 
 # target to build an object file
 iec60870/cs104/cs104_frame.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.o
 .PHONY : iec60870/cs104/cs104_frame.c.o
 
 iec60870/cs104/cs104_frame.i: iec60870/cs104/cs104_frame.c.i
@@ -2572,8 +2572,8 @@ iec60870/cs104/cs104_frame.i: iec60870/cs104/cs104_frame.c.i
 
 # target to preprocess a source file
 iec60870/cs104/cs104_frame.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.i
 .PHONY : iec60870/cs104/cs104_frame.c.i
 
 iec60870/cs104/cs104_frame.s: iec60870/cs104/cs104_frame.c.s
@@ -2581,8 +2581,8 @@ iec60870/cs104/cs104_frame.s: iec60870/cs104/cs104_frame.c.s
 
 # target to generate assembly for a file
 iec60870/cs104/cs104_frame.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_frame.c.s
 .PHONY : iec60870/cs104/cs104_frame.c.s
 
 iec60870/cs104/cs104_slave.o: iec60870/cs104/cs104_slave.c.o
@@ -2590,8 +2590,8 @@ iec60870/cs104/cs104_slave.o: iec60870/cs104/cs104_slave.c.o
 
 # target to build an object file
 iec60870/cs104/cs104_slave.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.o
 .PHONY : iec60870/cs104/cs104_slave.c.o
 
 iec60870/cs104/cs104_slave.i: iec60870/cs104/cs104_slave.c.i
@@ -2599,8 +2599,8 @@ iec60870/cs104/cs104_slave.i: iec60870/cs104/cs104_slave.c.i
 
 # target to preprocess a source file
 iec60870/cs104/cs104_slave.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.i
 .PHONY : iec60870/cs104/cs104_slave.c.i
 
 iec60870/cs104/cs104_slave.s: iec60870/cs104/cs104_slave.c.s
@@ -2608,8 +2608,8 @@ iec60870/cs104/cs104_slave.s: iec60870/cs104/cs104_slave.c.s
 
 # target to generate assembly for a file
 iec60870/cs104/cs104_slave.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/cs104/cs104_slave.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/cs104/cs104_slave.c.s
 .PHONY : iec60870/cs104/cs104_slave.c.s
 
 iec60870/frame.o: iec60870/frame.c.o
@@ -2617,8 +2617,8 @@ iec60870/frame.o: iec60870/frame.c.o
 
 # target to build an object file
 iec60870/frame.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.o
 .PHONY : iec60870/frame.c.o
 
 iec60870/frame.i: iec60870/frame.c.i
@@ -2626,8 +2626,8 @@ iec60870/frame.i: iec60870/frame.c.i
 
 # target to preprocess a source file
 iec60870/frame.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.i
 .PHONY : iec60870/frame.c.i
 
 iec60870/frame.s: iec60870/frame.c.s
@@ -2635,8 +2635,8 @@ iec60870/frame.s: iec60870/frame.c.s
 
 # target to generate assembly for a file
 iec60870/frame.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/frame.c.s
 .PHONY : iec60870/frame.c.s
 
 iec60870/lib60870_common.o: iec60870/lib60870_common.c.o
@@ -2644,8 +2644,8 @@ iec60870/lib60870_common.o: iec60870/lib60870_common.c.o
 
 # target to build an object file
 iec60870/lib60870_common.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.o
 .PHONY : iec60870/lib60870_common.c.o
 
 iec60870/lib60870_common.i: iec60870/lib60870_common.c.i
@@ -2653,8 +2653,8 @@ iec60870/lib60870_common.i: iec60870/lib60870_common.c.i
 
 # target to preprocess a source file
 iec60870/lib60870_common.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.i
 .PHONY : iec60870/lib60870_common.c.i
 
 iec60870/lib60870_common.s: iec60870/lib60870_common.c.s
@@ -2662,8 +2662,8 @@ iec60870/lib60870_common.s: iec60870/lib60870_common.c.s
 
 # target to generate assembly for a file
 iec60870/lib60870_common.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/lib60870_common.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/lib60870_common.c.s
 .PHONY : iec60870/lib60870_common.c.s
 
 iec60870/link_layer/buffer_frame.o: iec60870/link_layer/buffer_frame.c.o
@@ -2671,8 +2671,8 @@ iec60870/link_layer/buffer_frame.o: iec60870/link_layer/buffer_frame.c.o
 
 # target to build an object file
 iec60870/link_layer/buffer_frame.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.o
 .PHONY : iec60870/link_layer/buffer_frame.c.o
 
 iec60870/link_layer/buffer_frame.i: iec60870/link_layer/buffer_frame.c.i
@@ -2680,8 +2680,8 @@ iec60870/link_layer/buffer_frame.i: iec60870/link_layer/buffer_frame.c.i
 
 # target to preprocess a source file
 iec60870/link_layer/buffer_frame.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.i
 .PHONY : iec60870/link_layer/buffer_frame.c.i
 
 iec60870/link_layer/buffer_frame.s: iec60870/link_layer/buffer_frame.c.s
@@ -2689,8 +2689,8 @@ iec60870/link_layer/buffer_frame.s: iec60870/link_layer/buffer_frame.c.s
 
 # target to generate assembly for a file
 iec60870/link_layer/buffer_frame.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/buffer_frame.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/buffer_frame.c.s
 .PHONY : iec60870/link_layer/buffer_frame.c.s
 
 iec60870/link_layer/link_layer.o: iec60870/link_layer/link_layer.c.o
@@ -2698,8 +2698,8 @@ iec60870/link_layer/link_layer.o: iec60870/link_layer/link_layer.c.o
 
 # target to build an object file
 iec60870/link_layer/link_layer.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.o
 .PHONY : iec60870/link_layer/link_layer.c.o
 
 iec60870/link_layer/link_layer.i: iec60870/link_layer/link_layer.c.i
@@ -2707,8 +2707,8 @@ iec60870/link_layer/link_layer.i: iec60870/link_layer/link_layer.c.i
 
 # target to preprocess a source file
 iec60870/link_layer/link_layer.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.i
 .PHONY : iec60870/link_layer/link_layer.c.i
 
 iec60870/link_layer/link_layer.s: iec60870/link_layer/link_layer.c.s
@@ -2716,8 +2716,8 @@ iec60870/link_layer/link_layer.s: iec60870/link_layer/link_layer.c.s
 
 # target to generate assembly for a file
 iec60870/link_layer/link_layer.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/link_layer.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/link_layer.c.s
 .PHONY : iec60870/link_layer/link_layer.c.s
 
 iec60870/link_layer/serial_transceiver_ft_1_2.o: iec60870/link_layer/serial_transceiver_ft_1_2.c.o
@@ -2725,8 +2725,8 @@ iec60870/link_layer/serial_transceiver_ft_1_2.o: iec60870/link_layer/serial_tran
 
 # target to build an object file
 iec60870/link_layer/serial_transceiver_ft_1_2.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.o
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.o
 .PHONY : iec60870/link_layer/serial_transceiver_ft_1_2.c.o
 
 iec60870/link_layer/serial_transceiver_ft_1_2.i: iec60870/link_layer/serial_transceiver_ft_1_2.c.i
@@ -2734,8 +2734,8 @@ iec60870/link_layer/serial_transceiver_ft_1_2.i: iec60870/link_layer/serial_tran
 
 # target to preprocess a source file
 iec60870/link_layer/serial_transceiver_ft_1_2.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.i
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.i
 .PHONY : iec60870/link_layer/serial_transceiver_ft_1_2.c.i
 
 iec60870/link_layer/serial_transceiver_ft_1_2.s: iec60870/link_layer/serial_transceiver_ft_1_2.c.s
@@ -2743,8 +2743,8 @@ iec60870/link_layer/serial_transceiver_ft_1_2.s: iec60870/link_layer/serial_tran
 
 # target to generate assembly for a file
 iec60870/link_layer/serial_transceiver_ft_1_2.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.s
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/iec60870/link_layer/serial_transceiver_ft_1_2.c.s
 .PHONY : iec60870/link_layer/serial_transceiver_ft_1_2.c.s
 
 # Help Target
@@ -3056,6 +3056,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

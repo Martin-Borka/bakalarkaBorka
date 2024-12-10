@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -328,14 +328,14 @@ lib60870-C/tests/clean: lib60870-C/tests/CMakeFiles/tests.dir/clean
 CMakeFiles/borka_bp.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/borka_bp.dir/build.make CMakeFiles/borka_bp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/borka_bp.dir/build.make CMakeFiles/borka_bp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num= "Built target borka_bp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num= "Built target borka_bp"
 .PHONY : CMakeFiles/borka_bp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/borka_bp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/borka_bp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/borka_bp.dir/rule
 
 # Convenience name for target.
@@ -354,14 +354,14 @@ CMakeFiles/borka_bp.dir/clean:
 lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/build.make lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/build.make lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=1 "Built target cs101_master_balanced"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=1 "Built target cs101_master_balanced"
 .PHONY : lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/rule
 
 # Convenience name for target.
@@ -380,14 +380,14 @@ lib60870-C/examples/cs101_master_balanced/CMakeFiles/cs101_master_balanced.dir/c
 lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/build.make lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/build.make lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=2 "Built target cs101_master_unbalanced"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=2 "Built target cs101_master_unbalanced"
 .PHONY : lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.dir/rule
 
 # Convenience name for target.
@@ -406,14 +406,14 @@ lib60870-C/examples/cs101_master_unbalanced/CMakeFiles/cs101_master_unbalanced.d
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build.make lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build.make lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=3 "Built target cs101_slave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=3 "Built target cs101_slave"
 .PHONY : lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/rule
 
 # Convenience name for target.
@@ -432,14 +432,14 @@ lib60870-C/examples/cs101_slave/CMakeFiles/cs101_slave.dir/clean:
 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build.make lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=96 "Built target simple_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=96 "Built target simple_client"
 .PHONY : lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/rule
 
 # Convenience name for target.
@@ -458,14 +458,14 @@ lib60870-C/examples/cs104_client/CMakeFiles/simple_client.dir/clean:
 lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/build.make lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/build.make lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=5 "Built target cs104_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=5 "Built target cs104_server"
 .PHONY : lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/rule
 
 # Convenience name for target.
@@ -484,14 +484,14 @@ lib60870-C/examples/cs104_server/CMakeFiles/cs104_server.dir/clean:
 lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/build.make lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/build.make lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=6 "Built target cs104_server_no_threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=6 "Built target cs104_server_no_threads"
 .PHONY : lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.dir/rule
 
 # Convenience name for target.
@@ -510,14 +510,14 @@ lib60870-C/examples/cs104_server_no_threads/CMakeFiles/cs104_server_no_threads.d
 lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/build.make lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/build.make lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=4 "Built target cs104_redundancy_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=4 "Built target cs104_redundancy_server"
 .PHONY : lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.dir/rule
 
 # Convenience name for target.
@@ -536,14 +536,14 @@ lib60870-C/examples/cs104_redundancy_server/CMakeFiles/cs104_redundancy_server.d
 lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/build.make lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/build.make lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=95 "Built target multi_client_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=95 "Built target multi_client_server"
 .PHONY : lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/rule
 
 # Convenience name for target.
@@ -562,14 +562,14 @@ lib60870-C/examples/multi_client_server/CMakeFiles/multi_client_server.dir/clean
 lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/build.make lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/build.make lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=99 "Built target tls_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=99 "Built target tls_client"
 .PHONY : lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/rule
 
 # Convenience name for target.
@@ -588,14 +588,14 @@ lib60870-C/examples/tls_client/CMakeFiles/tls_client.dir/clean:
 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build.make lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=100 "Built target tls_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=100 "Built target tls_server"
 .PHONY : lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 45
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/rule
 
 # Convenience name for target.
@@ -614,14 +614,14 @@ lib60870-C/examples/tls_server/CMakeFiles/tls_server.dir/clean:
 lib60870-C/tests/CMakeFiles/tests.dir/all: lib60870-C/src/CMakeFiles/lib60870.dir/all
 	$(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=97,98 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=97,98 "Built target tests"
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -640,14 +640,14 @@ lib60870-C/tests/CMakeFiles/tests.dir/clean:
 lib60870-C/src/CMakeFiles/lib60870-shared.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870-shared.dir/build.make lib60870-C/src/CMakeFiles/lib60870-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94 "Built target lib60870-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94 "Built target lib60870-shared"
 .PHONY : lib60870-C/src/CMakeFiles/lib60870-shared.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870-shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/src/CMakeFiles/lib60870-shared.dir/rule
 
 # Convenience name for target.
@@ -666,14 +666,14 @@ lib60870-C/src/CMakeFiles/lib60870-shared.dir/clean:
 lib60870-C/src/CMakeFiles/lib60870.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib60870-C/src/CMakeFiles/lib60870.dir/build.make lib60870-C/src/CMakeFiles/lib60870.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target lib60870"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50 "Built target lib60870"
 .PHONY : lib60870-C/src/CMakeFiles/lib60870.dir/all
 
 # Build rule for subdir invocation for target.
 lib60870-C/src/CMakeFiles/lib60870.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/src/CMakeFiles/lib60870.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : lib60870-C/src/CMakeFiles/lib60870.dir/rule
 
 # Convenience name for target.

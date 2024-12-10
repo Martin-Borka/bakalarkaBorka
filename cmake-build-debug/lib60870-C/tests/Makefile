@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c
+CMAKE_SOURCE_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CPackSourceConfig.cmake
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && /usr/bin/cpack --config ./CPackSourceConfig.cmake /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/lib60870-C/tests//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug/CMakeFiles 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/lib60870-C/tests//CMakeFiles/progress.marks
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/clean
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/preinstall
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib60870-C/tests/CMakeFiles/tests.dir/rule:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/CMakeFiles/tests.dir/rule
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib60870-C/tests/CMakeFiles/tests.dir/rule
 .PHONY : lib60870-C/tests/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ tests: lib60870-C/tests/CMakeFiles/tests.dir/rule
 
 # fast build rule for target.
 tests/fast:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/build
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
 all_tests.o: all_tests.c.o
@@ -200,7 +200,7 @@ all_tests.o: all_tests.c.o
 
 # target to build an object file
 all_tests.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.o
 .PHONY : all_tests.c.o
 
 all_tests.i: all_tests.c.i
@@ -208,7 +208,7 @@ all_tests.i: all_tests.c.i
 
 # target to preprocess a source file
 all_tests.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.i
 .PHONY : all_tests.c.i
 
 all_tests.s: all_tests.c.s
@@ -216,7 +216,7 @@ all_tests.s: all_tests.c.s
 
 # target to generate assembly for a file
 all_tests.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/all_tests.c.s
 .PHONY : all_tests.c.s
 
 unity/unity.o: unity/unity.c.o
@@ -224,7 +224,7 @@ unity/unity.o: unity/unity.c.o
 
 # target to build an object file
 unity/unity.c.o:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.o
 .PHONY : unity/unity.c.o
 
 unity/unity.i: unity/unity.c.i
@@ -232,7 +232,7 @@ unity/unity.i: unity/unity.c.i
 
 # target to preprocess a source file
 unity/unity.c.i:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.i
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.i
 .PHONY : unity/unity.c.i
 
 unity/unity.s: unity/unity.c.s
@@ -240,7 +240,7 @@ unity/unity.s: unity/unity.c.s
 
 # target to generate assembly for a file
 unity/unity.c.s:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.s
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib60870-C/tests/CMakeFiles/tests.dir/build.make lib60870-C/tests/CMakeFiles/tests.dir/unity/unity.c.s
 .PHONY : unity/unity.c.s
 
 # Help Target
@@ -275,6 +275,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/untitled_clion_c/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/Martin/OneDrive/Dokumenty/GitHub/bakalarkaBorka/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
